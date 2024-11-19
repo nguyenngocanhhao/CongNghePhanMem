@@ -1,7 +1,8 @@
 services:
   - type: web
-    name: AthenaLibraryService
+    name: AthenaLibrary
     env: dotnet
-    buildCommand: "dotnet publish -c Release -o out"
-    startCommand: "dotnet out/NhaSachMetMoi.dll"
+    branch: master
+    buildCommand: "dotnet publish -c Release -o /app/publish"
+    startCommand: "dotnet /app/publish/NhaSachMetMoi.dll"
     plan: free
