@@ -1,0 +1,217 @@
+﻿@using NhaSachMetMoi.Models;
+@model Sach
+
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+<link href="~/Content/Layoutpage.css" rel="stylesheet" />
+
+@{
+    ViewBag.Title = "Chi Tiết Sản Phẩm";
+    Layout = "~/Views/Shared/Layoutpage.cshtml";
+}
+
+<script>
+    function checkValue(input) {
+        if (input.value > 10) {
+            input.value = 10;
+        }
+        if (input.value < 1) {
+            input.value = 1;
+        }
+    }
+</script>
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-lg-7 text-center mb-4">
+            <img src="@Url.Content("~/Content/images/sach/" + Model.AnhBia)" class="img-fluid rounded shadow-lg" alt="@Model.TenSach" />
+        </div>
+        <div class="col-lg-5">
+            <div class="card border-0 shadow-sm">
+                <div class="card-body">
+                    <h1 class="mb-4" style="color:#2E8B57">@Model.TenSach</h1>
+                    @*<p><strong>Thể loại:</strong> @Model.TL.TenTL</p>*@
+                    <p><strong>Tác giả:</strong> @Model.TG.TenTG</p>
+                    <p><strong>Nhà xuất bản:</strong> @Model.NXB.TenNXB</p>
+                    <p><strong>Năm xuất bản:</strong> @Model.NamXB</p>
+                    <p><strong>Khuyến mãi:</strong> @Model.Sale%</p>
+                    <p><strong>Mô tả:</strong> @Model.MoTa</p>
+
+                    <div class="price mt-4">
+                        <h4 class="text-success">Giá sản phẩm:</h4>
+                        <h3 class="text-danger font-weight-bold" style="font-family:'butler_light'">
+                            @string.Format("{0:0,0}", (decimal)Model.Gia * (1 - (int)Model.Sale / 100m)).Replace(",", ".") VNĐ
+                        </h3>
+                        <del class="text-muted">
+                            @string.Format("{0:0,0}", Model.Gia).Replace(",", ".") VNĐ
+                        </del>
+                    </div>
+
+                    <div class="mt-5">
+
+
+                        <div class="container_swap">
+                            @using (Html.BeginForm("ThemGioHang", "GioHang", new { @iMaSach = Model.MaSach, @strURL = Request.Url.ToString() }))
+                            {
+                                <button type="submit" class="left">Thêm vào giỏ</button>
+                            }
+                            @using (Html.BeginForm("MuaNgay", "GioHang", new { @iMaSach = Model.MaSach, @strURL = Request.Url.ToString() }))
+                            {
+                                <button type="submit" class="right">Mua ngay</button>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="mt-5 recommned">
+    <h3 class="mb-4" style="text-align: center; padding-top: 10px;">
+        Sản phẩm cùng loại
+    </h3>
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="book-must-try-section " style="background:#ffffff">
+                    <div class="book-must-try-container d-flex justify-content-around flex-wrap">
+                        @foreach (var item in Model.CungTheLoai.Take(4))
+                        {
+                            <a href="@Url.Action("XemCT", "TrangChu", new { @masach = item.MaSach })" class="product-link">
+                                <div class="product">
+                                    <div class="product-image">
+                                        <img src="@Url.Content("~/Content/images/sach/" + item.AnhBia)" alt="Book Image" width="200" height="250">
+                                        @if (item.Sale > 0)
+                                        {
+                                            <div class="thumb-discount-label">
+                                                <span>@item.Sale%</span>
+                                            </div>
+                                        }
+                                    </div>
+                                    <div class="product-title">
+                                        <span>@item.TenSach</span>
+                                    </div>
+                                    <div class="product-price">
+                                        <b class="discounted-price">@string.Format("{0:0,0}", (decimal)item.Gia * (1 - (int)item.Sale / 100m)).Replace(",", ".") VNĐ</b>
+                                        @if (item.Sale > 0)
+                                        {
+                                            <del class="original-price">@string.Format("{0:0,0}", item.Gia).Replace(",", ".") VNĐ</del>
+                                        }
+                                    </div>
+                                </div>
+                            </a>
+                        }
+                    </div>
+                </div>
+            </div>
+            @for (int i = 1; i < Math.Ceiling((double)Model.CungTheLoai.Count() / 4); i++)
+            {
+                <div class="carousel-item">
+                    <div class="book-must-try-section" style="background:#ffffff">
+                        <div class="book-must-try-container d-flex justify-content-around flex-wrap">
+                            @foreach (var item in Model.CungTheLoai.Skip(i * 4).Take(4))
+                            {
+                                <a href="@Url.Action("XemCT", "TrangChu", new { @masach = item.MaSach })" class="product-link">
+                                    <div class="product">
+                                        <div class="product-image">
+                                            <img src="@Url.Content("~/Content/images/sach/" + item.AnhBia)" alt="Book Image" width="200" height="250">
+                                            @if (item.Sale > 0)
+                                            {
+                                                <div class="thumb-discount-label">
+                                                    <span>@item.Sale%</span>
+                                                </div>
+                                            }
+                                        </div>
+                                        <div class="product-title">
+                                            <span>@item.TenSach</span>
+                                        </div>
+                                        <div class="product-price">
+                                            <b class="discounted-price">@string.Format("{0:0,0}", (decimal)item.Gia * (1 - (int)item.Sale / 100m)).Replace(",", ".") VNĐ</b>
+                                            @if (item.Sale > 0)
+                                            {
+                                                <del class="original-price">@string.Format("{0:0,0}", item.Gia).Replace(",", ".") VNĐ</del>
+                                            }
+                                        </div>
+                                    </div>
+                                </a>
+                            }
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+</div>
+
+<style>
+    .product {
+        cursor: pointer;
+         
+    }
+    .carousel-control-prev, .carousel-control-next {
+        width: 5%;
+    }
+
+    .price h3 {
+        font-size: 2rem;
+    }
+
+    .price del {
+        font-size: 1.2rem;
+    }
+
+    .card-body h1 {
+        font-size: 2.5rem;
+        color: #ffa500;
+    }
+
+    .btn-primary {
+        background-color: #007bff;
+        border-color: #007bff;
+    }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+        }
+
+    .btn-success {
+        background-color: #28a745;
+        border-color: #28a745;
+    }
+
+        .btn-success:hover {
+            background-color: #218838;
+            border-color: #1e7e34;
+        }
+
+    .recommned h3 {
+        font-weight: bold;
+    }
+
+    .card-title {
+        font-size: 1.1rem;
+        color: #333;
+    }
+
+    .badge-success {
+        background-color: #28a745;
+        font-size: 0.9rem;
+        padding: 5px 10px;
+    }
+</style>
+
+<script>
+    $(document).ready(function () {
+        $('#carouselExampleControls').carousel({
+            interval: 3000
+        });
+    });
+</script>

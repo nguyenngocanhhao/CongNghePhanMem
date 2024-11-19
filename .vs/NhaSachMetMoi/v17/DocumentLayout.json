@@ -1,0 +1,916 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\NhaSachMetMoiCNPM\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D12DDFAA-EF66-49B6-A415-B79000DD8436}|NhaSachMetMoi\\NhaSachMetMoi.csproj|d:\\nhasachmetmoicnpm\\nhasachmetmoi\\views\\admin\\thongkedoanhthu.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D12DDFAA-EF66-49B6-A415-B79000DD8436}|NhaSachMetMoi\\NhaSachMetMoi.csproj|solutionrelative:nhasachmetmoi\\views\\admin\\thongkedoanhthu.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D12DDFAA-EF66-49B6-A415-B79000DD8436}|NhaSachMetMoi\\NhaSachMetMoi.csproj|D:\\NhaSachMetMoiCNPM\\nhasachmetmoi\\views\\trangchu\\tatcasanpham.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D12DDFAA-EF66-49B6-A415-B79000DD8436}|NhaSachMetMoi\\NhaSachMetMoi.csproj|solutionrelative:nhasachmetmoi\\views\\trangchu\\tatcasanpham.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D12DDFAA-EF66-49B6-A415-B79000DD8436}|NhaSachMetMoi\\NhaSachMetMoi.csproj|D:\\NhaSachMetMoiCNPM\\nhasachmetmoi\\views\\shared\\admin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D12DDFAA-EF66-49B6-A415-B79000DD8436}|NhaSachMetMoi\\NhaSachMetMoi.csproj|solutionrelative:nhasachmetmoi\\views\\shared\\admin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D12DDFAA-EF66-49B6-A415-B79000DD8436}|NhaSachMetMoi\\NhaSachMetMoi.csproj|D:\\NhaSachMetMoiCNPM\\nhasachmetmoi\\controllers\\trangchucontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D12DDFAA-EF66-49B6-A415-B79000DD8436}|NhaSachMetMoi\\NhaSachMetMoi.csproj|solutionrelative:nhasachmetmoi\\controllers\\trangchucontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D12DDFAA-EF66-49B6-A415-B79000DD8436}|NhaSachMetMoi\\NhaSachMetMoi.csproj|d:\\nhasachmetmoicnpm\\nhasachmetmoi\\views\\trangchu\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D12DDFAA-EF66-49B6-A415-B79000DD8436}|NhaSachMetMoi\\NhaSachMetMoi.csproj|solutionrelative:nhasachmetmoi\\views\\trangchu\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D12DDFAA-EF66-49B6-A415-B79000DD8436}|NhaSachMetMoi\\NhaSachMetMoi.csproj|D:\\NhaSachMetMoiCNPM\\nhasachmetmoi\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D12DDFAA-EF66-49B6-A415-B79000DD8436}|NhaSachMetMoi\\NhaSachMetMoi.csproj|solutionrelative:nhasachmetmoi\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D12DDFAA-EF66-49B6-A415-B79000DD8436}|NhaSachMetMoi\\NhaSachMetMoi.csproj|D:\\NhaSachMetMoiCNPM\\nhasachmetmoi\\views\\admin\\indexkh.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D12DDFAA-EF66-49B6-A415-B79000DD8436}|NhaSachMetMoi\\NhaSachMetMoi.csproj|solutionrelative:nhasachmetmoi\\views\\admin\\indexkh.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D12DDFAA-EF66-49B6-A415-B79000DD8436}|NhaSachMetMoi\\NhaSachMetMoi.csproj|d:\\nhasachmetmoicnpm\\nhasachmetmoi\\views\\admin\\indexdh.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D12DDFAA-EF66-49B6-A415-B79000DD8436}|NhaSachMetMoi\\NhaSachMetMoi.csproj|solutionrelative:nhasachmetmoi\\views\\admin\\indexdh.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D12DDFAA-EF66-49B6-A415-B79000DD8436}|NhaSachMetMoi\\NhaSachMetMoi.csproj|D:\\NhaSachMetMoiCNPM\\nhasachmetmoi\\views\\khachhang\\thongtincanhan.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D12DDFAA-EF66-49B6-A415-B79000DD8436}|NhaSachMetMoi\\NhaSachMetMoi.csproj|solutionrelative:nhasachmetmoi\\views\\khachhang\\thongtincanhan.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D12DDFAA-EF66-49B6-A415-B79000DD8436}|NhaSachMetMoi\\NhaSachMetMoi.csproj|D:\\NhaSachMetMoiCNPM\\nhasachmetmoi\\controllers\\giohangcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D12DDFAA-EF66-49B6-A415-B79000DD8436}|NhaSachMetMoi\\NhaSachMetMoi.csproj|solutionrelative:nhasachmetmoi\\controllers\\giohangcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D12DDFAA-EF66-49B6-A415-B79000DD8436}|NhaSachMetMoi\\NhaSachMetMoi.csproj|D:\\NhaSachMetMoiCNPM\\nhasachmetmoi\\controllers\\bookingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D12DDFAA-EF66-49B6-A415-B79000DD8436}|NhaSachMetMoi\\NhaSachMetMoi.csproj|solutionrelative:nhasachmetmoi\\controllers\\bookingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D12DDFAA-EF66-49B6-A415-B79000DD8436}|NhaSachMetMoi\\NhaSachMetMoi.csproj|D:\\NhaSachMetMoiCNPM\\nhasachmetmoi\\views\\giohang\\xacnhandonhang.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D12DDFAA-EF66-49B6-A415-B79000DD8436}|NhaSachMetMoi\\NhaSachMetMoi.csproj|solutionrelative:nhasachmetmoi\\views\\giohang\\xacnhandonhang.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D12DDFAA-EF66-49B6-A415-B79000DD8436}|NhaSachMetMoi\\NhaSachMetMoi.csproj|D:\\NhaSachMetMoiCNPM\\nhasachmetmoi\\views\\khachhang\\chitietbooking.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D12DDFAA-EF66-49B6-A415-B79000DD8436}|NhaSachMetMoi\\NhaSachMetMoi.csproj|solutionrelative:nhasachmetmoi\\views\\khachhang\\chitietbooking.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D12DDFAA-EF66-49B6-A415-B79000DD8436}|NhaSachMetMoi\\NhaSachMetMoi.csproj|D:\\NhaSachMetMoiCNPM\\nhasachmetmoi\\views\\shared\\layoutpage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D12DDFAA-EF66-49B6-A415-B79000DD8436}|NhaSachMetMoi\\NhaSachMetMoi.csproj|solutionrelative:nhasachmetmoi\\views\\shared\\layoutpage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D12DDFAA-EF66-49B6-A415-B79000DD8436}|NhaSachMetMoi\\NhaSachMetMoi.csproj|D:\\NhaSachMetMoiCNPM\\nhasachmetmoi\\views\\khachhang\\suattcn.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D12DDFAA-EF66-49B6-A415-B79000DD8436}|NhaSachMetMoi\\NhaSachMetMoi.csproj|solutionrelative:nhasachmetmoi\\views\\khachhang\\suattcn.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D12DDFAA-EF66-49B6-A415-B79000DD8436}|NhaSachMetMoi\\NhaSachMetMoi.csproj|D:\\NhaSachMetMoiCNPM\\nhasachmetmoi\\views\\giohang\\dathangthanhcong.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D12DDFAA-EF66-49B6-A415-B79000DD8436}|NhaSachMetMoi\\NhaSachMetMoi.csproj|solutionrelative:nhasachmetmoi\\views\\giohang\\dathangthanhcong.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D12DDFAA-EF66-49B6-A415-B79000DD8436}|NhaSachMetMoi\\NhaSachMetMoi.csproj|D:\\NhaSachMetMoiCNPM\\nhasachmetmoi\\views\\admin\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D12DDFAA-EF66-49B6-A415-B79000DD8436}|NhaSachMetMoi\\NhaSachMetMoi.csproj|solutionrelative:nhasachmetmoi\\views\\admin\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D12DDFAA-EF66-49B6-A415-B79000DD8436}|NhaSachMetMoi\\NhaSachMetMoi.csproj|D:\\NhaSachMetMoiCNPM\\nhasachmetmoi\\views\\admin\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D12DDFAA-EF66-49B6-A415-B79000DD8436}|NhaSachMetMoi\\NhaSachMetMoi.csproj|solutionrelative:nhasachmetmoi\\views\\admin\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D12DDFAA-EF66-49B6-A415-B79000DD8436}|NhaSachMetMoi\\NhaSachMetMoi.csproj|D:\\NhaSachMetMoiCNPM\\nhasachmetmoi\\views\\admin\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D12DDFAA-EF66-49B6-A415-B79000DD8436}|NhaSachMetMoi\\NhaSachMetMoi.csproj|solutionrelative:nhasachmetmoi\\views\\admin\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D12DDFAA-EF66-49B6-A415-B79000DD8436}|NhaSachMetMoi\\NhaSachMetMoi.csproj|D:\\NhaSachMetMoiCNPM\\nhasachmetmoi\\views\\admin\\indexad.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D12DDFAA-EF66-49B6-A415-B79000DD8436}|NhaSachMetMoi\\NhaSachMetMoi.csproj|solutionrelative:nhasachmetmoi\\views\\admin\\indexad.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D12DDFAA-EF66-49B6-A415-B79000DD8436}|NhaSachMetMoi\\NhaSachMetMoi.csproj|D:\\NhaSachMetMoiCNPM\\nhasachmetmoi\\controllers\\timcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D12DDFAA-EF66-49B6-A415-B79000DD8436}|NhaSachMetMoi\\NhaSachMetMoi.csproj|solutionrelative:nhasachmetmoi\\controllers\\timcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D12DDFAA-EF66-49B6-A415-B79000DD8436}|NhaSachMetMoi\\NhaSachMetMoi.csproj|D:\\NhaSachMetMoiCNPM\\nhasachmetmoi\\views\\tim\\ketquatimkiem.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D12DDFAA-EF66-49B6-A415-B79000DD8436}|NhaSachMetMoi\\NhaSachMetMoi.csproj|solutionrelative:nhasachmetmoi\\views\\tim\\ketquatimkiem.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D12DDFAA-EF66-49B6-A415-B79000DD8436}|NhaSachMetMoi\\NhaSachMetMoi.csproj|D:\\NhaSachMetMoiCNPM\\nhasachmetmoi\\content\\layoutpage.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{D12DDFAA-EF66-49B6-A415-B79000DD8436}|NhaSachMetMoi\\NhaSachMetMoi.csproj|solutionrelative:nhasachmetmoi\\content\\layoutpage.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D12DDFAA-EF66-49B6-A415-B79000DD8436}|NhaSachMetMoi\\NhaSachMetMoi.csproj|D:\\NhaSachMetMoiCNPM\\nhasachmetmoi\\views\\trangchu\\sachtl.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D12DDFAA-EF66-49B6-A415-B79000DD8436}|NhaSachMetMoi\\NhaSachMetMoi.csproj|solutionrelative:nhasachmetmoi\\views\\trangchu\\sachtl.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D12DDFAA-EF66-49B6-A415-B79000DD8436}|NhaSachMetMoi\\NhaSachMetMoi.csproj|D:\\NhaSachMetMoiCNPM\\nhasachmetmoi\\views\\trangchu\\xemct.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D12DDFAA-EF66-49B6-A415-B79000DD8436}|NhaSachMetMoi\\NhaSachMetMoi.csproj|solutionrelative:nhasachmetmoi\\views\\trangchu\\xemct.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D12DDFAA-EF66-49B6-A415-B79000DD8436}|NhaSachMetMoi\\NhaSachMetMoi.csproj|D:\\NhaSachMetMoiCNPM\\nhasachmetmoi\\content\\homepage.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{D12DDFAA-EF66-49B6-A415-B79000DD8436}|NhaSachMetMoi\\NhaSachMetMoi.csproj|solutionrelative:nhasachmetmoi\\content\\homepage.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D12DDFAA-EF66-49B6-A415-B79000DD8436}|NhaSachMetMoi\\NhaSachMetMoi.csproj|D:\\NhaSachMetMoiCNPM\\nhasachmetmoi\\views\\admin\\indexb.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D12DDFAA-EF66-49B6-A415-B79000DD8436}|NhaSachMetMoi\\NhaSachMetMoi.csproj|solutionrelative:nhasachmetmoi\\views\\admin\\indexb.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D12DDFAA-EF66-49B6-A415-B79000DD8436}|NhaSachMetMoi\\NhaSachMetMoi.csproj|D:\\NhaSachMetMoiCNPM\\nhasachmetmoi\\models\\khachhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D12DDFAA-EF66-49B6-A415-B79000DD8436}|NhaSachMetMoi\\NhaSachMetMoi.csproj|solutionrelative:nhasachmetmoi\\models\\khachhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D12DDFAA-EF66-49B6-A415-B79000DD8436}|NhaSachMetMoi\\NhaSachMetMoi.csproj|D:\\NhaSachMetMoiCNPM\\nhasachmetmoi\\views\\admin\\deleteb.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D12DDFAA-EF66-49B6-A415-B79000DD8436}|NhaSachMetMoi\\NhaSachMetMoi.csproj|solutionrelative:nhasachmetmoi\\views\\admin\\deleteb.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D12DDFAA-EF66-49B6-A415-B79000DD8436}|NhaSachMetMoi\\NhaSachMetMoi.csproj|D:\\NhaSachMetMoiCNPM\\nhasachmetmoi\\views\\booking\\confirmation.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D12DDFAA-EF66-49B6-A415-B79000DD8436}|NhaSachMetMoi\\NhaSachMetMoi.csproj|solutionrelative:nhasachmetmoi\\views\\booking\\confirmation.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D12DDFAA-EF66-49B6-A415-B79000DD8436}|NhaSachMetMoi\\NhaSachMetMoi.csproj|D:\\NhaSachMetMoiCNPM\\nhasachmetmoi\\views\\admin\\editb.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D12DDFAA-EF66-49B6-A415-B79000DD8436}|NhaSachMetMoi\\NhaSachMetMoi.csproj|solutionrelative:nhasachmetmoi\\views\\admin\\editb.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D12DDFAA-EF66-49B6-A415-B79000DD8436}|NhaSachMetMoi\\NhaSachMetMoi.csproj|D:\\NhaSachMetMoiCNPM\\nhasachmetmoi\\views\\admin\\detailsb.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D12DDFAA-EF66-49B6-A415-B79000DD8436}|NhaSachMetMoi\\NhaSachMetMoi.csproj|solutionrelative:nhasachmetmoi\\views\\admin\\detailsb.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D12DDFAA-EF66-49B6-A415-B79000DD8436}|NhaSachMetMoi\\NhaSachMetMoi.csproj|D:\\NhaSachMetMoiCNPM\\nhasachmetmoi\\content\\stylesheet1.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{D12DDFAA-EF66-49B6-A415-B79000DD8436}|NhaSachMetMoi\\NhaSachMetMoi.csproj|solutionrelative:nhasachmetmoi\\content\\stylesheet1.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D12DDFAA-EF66-49B6-A415-B79000DD8436}|NhaSachMetMoi\\NhaSachMetMoi.csproj|D:\\NhaSachMetMoiCNPM\\nhasachmetmoi\\views\\booking\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D12DDFAA-EF66-49B6-A415-B79000DD8436}|NhaSachMetMoi\\NhaSachMetMoi.csproj|solutionrelative:nhasachmetmoi\\views\\booking\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D12DDFAA-EF66-49B6-A415-B79000DD8436}|NhaSachMetMoi\\NhaSachMetMoi.csproj|D:\\NhaSachMetMoiCNPM\\nhasachmetmoi\\views\\admin\\detaildh.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D12DDFAA-EF66-49B6-A415-B79000DD8436}|NhaSachMetMoi\\NhaSachMetMoi.csproj|solutionrelative:nhasachmetmoi\\views\\admin\\detaildh.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D12DDFAA-EF66-49B6-A415-B79000DD8436}|NhaSachMetMoi\\NhaSachMetMoi.csproj|D:\\NhaSachMetMoiCNPM\\nhasachmetmoi\\views\\admin\\editdh.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D12DDFAA-EF66-49B6-A415-B79000DD8436}|NhaSachMetMoi\\NhaSachMetMoi.csproj|solutionrelative:nhasachmetmoi\\views\\admin\\editdh.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D12DDFAA-EF66-49B6-A415-B79000DD8436}|NhaSachMetMoi\\NhaSachMetMoi.csproj|D:\\NhaSachMetMoiCNPM\\nhasachmetmoi\\views\\admin\\editkh.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D12DDFAA-EF66-49B6-A415-B79000DD8436}|NhaSachMetMoi\\NhaSachMetMoi.csproj|solutionrelative:nhasachmetmoi\\views\\admin\\editkh.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D12DDFAA-EF66-49B6-A415-B79000DD8436}|NhaSachMetMoi\\NhaSachMetMoi.csproj|D:\\NhaSachMetMoiCNPM\\nhasachmetmoi\\views\\admin\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D12DDFAA-EF66-49B6-A415-B79000DD8436}|NhaSachMetMoi\\NhaSachMetMoi.csproj|solutionrelative:nhasachmetmoi\\views\\admin\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D12DDFAA-EF66-49B6-A415-B79000DD8436}|NhaSachMetMoi\\NhaSachMetMoi.csproj|D:\\NhaSachMetMoiCNPM\\nhasachmetmoi\\views\\admin\\detailkh.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D12DDFAA-EF66-49B6-A415-B79000DD8436}|NhaSachMetMoi\\NhaSachMetMoi.csproj|solutionrelative:nhasachmetmoi\\views\\admin\\detailkh.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D12DDFAA-EF66-49B6-A415-B79000DD8436}|NhaSachMetMoi\\NhaSachMetMoi.csproj|D:\\NhaSachMetMoiCNPM\\nhasachmetmoi\\views\\admin\\deletekh.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D12DDFAA-EF66-49B6-A415-B79000DD8436}|NhaSachMetMoi\\NhaSachMetMoi.csproj|solutionrelative:nhasachmetmoi\\views\\admin\\deletekh.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D12DDFAA-EF66-49B6-A415-B79000DD8436}|NhaSachMetMoi\\NhaSachMetMoi.csproj|D:\\NhaSachMetMoiCNPM\\nhasachmetmoi\\views\\dangnhap\\indextk.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D12DDFAA-EF66-49B6-A415-B79000DD8436}|NhaSachMetMoi\\NhaSachMetMoi.csproj|solutionrelative:nhasachmetmoi\\views\\dangnhap\\indextk.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D12DDFAA-EF66-49B6-A415-B79000DD8436}|NhaSachMetMoi\\NhaSachMetMoi.csproj|D:\\NhaSachMetMoiCNPM\\nhasachmetmoi\\views\\admin\\deletedh.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D12DDFAA-EF66-49B6-A415-B79000DD8436}|NhaSachMetMoi\\NhaSachMetMoi.csproj|solutionrelative:nhasachmetmoi\\views\\admin\\deletedh.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D12DDFAA-EF66-49B6-A415-B79000DD8436}|NhaSachMetMoi\\NhaSachMetMoi.csproj|D:\\NhaSachMetMoiCNPM\\nhasachmetmoi\\views\\giohang\\giohangpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D12DDFAA-EF66-49B6-A415-B79000DD8436}|NhaSachMetMoi\\NhaSachMetMoi.csproj|solutionrelative:nhasachmetmoi\\views\\giohang\\giohangpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D12DDFAA-EF66-49B6-A415-B79000DD8436}|NhaSachMetMoi\\NhaSachMetMoi.csproj|D:\\NhaSachMetMoiCNPM\\nhasachmetmoi\\views\\giohang\\giohang.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D12DDFAA-EF66-49B6-A415-B79000DD8436}|NhaSachMetMoi\\NhaSachMetMoi.csproj|solutionrelative:nhasachmetmoi\\views\\giohang\\giohang.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D12DDFAA-EF66-49B6-A415-B79000DD8436}|NhaSachMetMoi\\NhaSachMetMoi.csproj|D:\\NhaSachMetMoiCNPM\\nhasachmetmoi\\views\\giohang\\dathang.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D12DDFAA-EF66-49B6-A415-B79000DD8436}|NhaSachMetMoi\\NhaSachMetMoi.csproj|solutionrelative:nhasachmetmoi\\views\\giohang\\dathang.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D12DDFAA-EF66-49B6-A415-B79000DD8436}|NhaSachMetMoi\\NhaSachMetMoi.csproj|D:\\NhaSachMetMoiCNPM\\nhasachmetmoi\\views\\giohang\\suaxacnhantt.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D12DDFAA-EF66-49B6-A415-B79000DD8436}|NhaSachMetMoi\\NhaSachMetMoi.csproj|solutionrelative:nhasachmetmoi\\views\\giohang\\suaxacnhantt.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D12DDFAA-EF66-49B6-A415-B79000DD8436}|NhaSachMetMoi\\NhaSachMetMoi.csproj|D:\\NhaSachMetMoiCNPM\\nhasachmetmoi\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{D12DDFAA-EF66-49B6-A415-B79000DD8436}|NhaSachMetMoi\\NhaSachMetMoi.csproj|solutionrelative:nhasachmetmoi\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D12DDFAA-EF66-49B6-A415-B79000DD8436}|NhaSachMetMoi\\NhaSachMetMoi.csproj|D:\\NhaSachMetMoiCNPM\\nhasachmetmoi\\views\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{D12DDFAA-EF66-49B6-A415-B79000DD8436}|NhaSachMetMoi\\NhaSachMetMoi.csproj|solutionrelative:nhasachmetmoi\\views\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D12DDFAA-EF66-49B6-A415-B79000DD8436}|NhaSachMetMoi\\NhaSachMetMoi.csproj|D:\\NhaSachMetMoiCNPM\\nhasachmetmoi\\web.debug.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{D12DDFAA-EF66-49B6-A415-B79000DD8436}|NhaSachMetMoi\\NhaSachMetMoi.csproj|solutionrelative:nhasachmetmoi\\web.debug.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D12DDFAA-EF66-49B6-A415-B79000DD8436}|NhaSachMetMoi\\NhaSachMetMoi.csproj|D:\\NhaSachMetMoiCNPM\\nhasachmetmoi\\content\\booking.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{D12DDFAA-EF66-49B6-A415-B79000DD8436}|NhaSachMetMoi\\NhaSachMetMoi.csproj|solutionrelative:nhasachmetmoi\\content\\booking.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D12DDFAA-EF66-49B6-A415-B79000DD8436}|NhaSachMetMoi\\NhaSachMetMoi.csproj|D:\\NhaSachMetMoiCNPM\\nhasachmetmoi\\models\\nhasach.edmx.diagram||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{D12DDFAA-EF66-49B6-A415-B79000DD8436}|NhaSachMetMoi\\NhaSachMetMoi.csproj|solutionrelative:nhasachmetmoi\\models\\nhasach.edmx.diagram||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D12DDFAA-EF66-49B6-A415-B79000DD8436}|NhaSachMetMoi\\NhaSachMetMoi.csproj|D:\\NhaSachMetMoiCNPM\\nhasachmetmoi\\models\\nhasach.context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D12DDFAA-EF66-49B6-A415-B79000DD8436}|NhaSachMetMoi\\NhaSachMetMoi.csproj|solutionrelative:nhasachmetmoi\\models\\nhasach.context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D12DDFAA-EF66-49B6-A415-B79000DD8436}|NhaSachMetMoi\\NhaSachMetMoi.csproj|D:\\NhaSachMetMoiCNPM\\nhasachmetmoi\\models\\giohang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D12DDFAA-EF66-49B6-A415-B79000DD8436}|NhaSachMetMoi\\NhaSachMetMoi.csproj|solutionrelative:nhasachmetmoi\\models\\giohang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D12DDFAA-EF66-49B6-A415-B79000DD8436}|NhaSachMetMoi\\NhaSachMetMoi.csproj|D:\\NhaSachMetMoiCNPM\\nhasachmetmoi\\models\\nhasach.context.tt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{D12DDFAA-EF66-49B6-A415-B79000DD8436}|NhaSachMetMoi\\NhaSachMetMoi.csproj|solutionrelative:nhasachmetmoi\\models\\nhasach.context.tt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D12DDFAA-EF66-49B6-A415-B79000DD8436}|NhaSachMetMoi\\NhaSachMetMoi.csproj|D:\\NhaSachMetMoiCNPM\\nhasachmetmoi\\properties\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D12DDFAA-EF66-49B6-A415-B79000DD8436}|NhaSachMetMoi\\NhaSachMetMoi.csproj|solutionrelative:nhasachmetmoi\\properties\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "homepage.js",
+              "DocumentMoniker": "D:\\NhaSachMetMoiCNPM\\NhaSachMetMoi\\Content\\homepage.js",
+              "RelativeDocumentMoniker": "NhaSachMetMoi\\Content\\homepage.js",
+              "ToolTip": "D:\\NhaSachMetMoiCNPM\\NhaSachMetMoi\\Content\\homepage.js",
+              "RelativeToolTip": "NhaSachMetMoi\\Content\\homepage.js",
+              "ViewState": "AgIAADcAAAAAAAAAAAA2wEcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-11-17T14:16:27.366Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Layoutpage.css",
+              "DocumentMoniker": "D:\\NhaSachMetMoiCNPM\\NhaSachMetMoi\\Content\\Layoutpage.css",
+              "RelativeDocumentMoniker": "NhaSachMetMoi\\Content\\Layoutpage.css",
+              "ToolTip": "D:\\NhaSachMetMoiCNPM\\NhaSachMetMoi\\Content\\Layoutpage.css",
+              "RelativeToolTip": "NhaSachMetMoi\\Content\\Layoutpage.css",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAAKcEAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-10-31T14:48:24.966Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\NhaSachMetMoiCNPM\\NhaSachMetMoi\\Views\\Trangchu\\Index.cshtml",
+              "RelativeDocumentMoniker": "NhaSachMetMoi\\Views\\Trangchu\\Index.cshtml",
+              "ToolTip": "D:\\NhaSachMetMoiCNPM\\NhaSachMetMoi\\Views\\Trangchu\\Index.cshtml",
+              "RelativeToolTip": "NhaSachMetMoi\\Views\\Trangchu\\Index.cshtml",
+              "ViewState": "AgIAAG8AAAAAAAAAAAAAAIcAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-14T15:52:53.088Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TatCaSanPham.cshtml",
+              "DocumentMoniker": "D:\\NhaSachMetMoiCNPM\\NhaSachMetMoi\\Views\\Trangchu\\TatCaSanPham.cshtml",
+              "RelativeDocumentMoniker": "NhaSachMetMoi\\Views\\Trangchu\\TatCaSanPham.cshtml",
+              "ToolTip": "D:\\NhaSachMetMoiCNPM\\NhaSachMetMoi\\Views\\Trangchu\\TatCaSanPham.cshtml",
+              "RelativeToolTip": "NhaSachMetMoi\\Views\\Trangchu\\TatCaSanPham.cshtml",
+              "ViewState": "AgIAAEgAAAAAAAAAAADwv34AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-18T09:53:56.825Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Admin.cshtml",
+              "DocumentMoniker": "D:\\NhaSachMetMoiCNPM\\NhaSachMetMoi\\Views\\Shared\\Admin.cshtml",
+              "RelativeDocumentMoniker": "NhaSachMetMoi\\Views\\Shared\\Admin.cshtml",
+              "ToolTip": "D:\\NhaSachMetMoiCNPM\\NhaSachMetMoi\\Views\\Shared\\Admin.cshtml",
+              "RelativeToolTip": "NhaSachMetMoi\\Views\\Shared\\Admin.cshtml",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAACMAAABKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-17T04:12:24.334Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TrangchuController.cs",
+              "DocumentMoniker": "D:\\NhaSachMetMoiCNPM\\NhaSachMetMoi\\Controllers\\TrangchuController.cs",
+              "RelativeDocumentMoniker": "NhaSachMetMoi\\Controllers\\TrangchuController.cs",
+              "ToolTip": "D:\\NhaSachMetMoiCNPM\\NhaSachMetMoi\\Controllers\\TrangchuController.cs",
+              "RelativeToolTip": "NhaSachMetMoi\\Controllers\\TrangchuController.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAcwFgAAABUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-04T10:09:25.599Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ThongKeDoanhThu.cshtml",
+              "DocumentMoniker": "D:\\NhaSachMetMoiCNPM\\NhaSachMetMoi\\Views\\Admin\\ThongKeDoanhThu.cshtml",
+              "RelativeDocumentMoniker": "NhaSachMetMoi\\Views\\Admin\\ThongKeDoanhThu.cshtml",
+              "ToolTip": "D:\\NhaSachMetMoiCNPM\\NhaSachMetMoi\\Views\\Admin\\ThongKeDoanhThu.cshtml",
+              "RelativeToolTip": "NhaSachMetMoi\\Views\\Admin\\ThongKeDoanhThu.cshtml",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAAADgAAABOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-19T10:21:17.254Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AdminController.cs",
+              "DocumentMoniker": "D:\\NhaSachMetMoiCNPM\\NhaSachMetMoi\\Controllers\\AdminController.cs",
+              "RelativeDocumentMoniker": "NhaSachMetMoi\\Controllers\\AdminController.cs",
+              "ToolTip": "D:\\NhaSachMetMoiCNPM\\NhaSachMetMoi\\Controllers\\AdminController.cs",
+              "RelativeToolTip": "NhaSachMetMoi\\Controllers\\AdminController.cs",
+              "ViewState": "AgIAAIQDAAAAAAAAAAAiwJcDAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-14T13:11:32.841Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "IndexKH.cshtml",
+              "DocumentMoniker": "D:\\NhaSachMetMoiCNPM\\NhaSachMetMoi\\Views\\Admin\\IndexKH.cshtml",
+              "RelativeDocumentMoniker": "NhaSachMetMoi\\Views\\Admin\\IndexKH.cshtml",
+              "ToolTip": "D:\\NhaSachMetMoiCNPM\\NhaSachMetMoi\\Views\\Admin\\IndexKH.cshtml",
+              "RelativeToolTip": "NhaSachMetMoi\\Views\\Admin\\IndexKH.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-17T03:48:07.932Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "IndexDH.cshtml",
+              "DocumentMoniker": "D:\\NhaSachMetMoiCNPM\\NhaSachMetMoi\\Views\\Admin\\IndexDH.cshtml",
+              "RelativeDocumentMoniker": "NhaSachMetMoi\\Views\\Admin\\IndexDH.cshtml",
+              "ToolTip": "D:\\NhaSachMetMoiCNPM\\NhaSachMetMoi\\Views\\Admin\\IndexDH.cshtml",
+              "RelativeToolTip": "NhaSachMetMoi\\Views\\Admin\\IndexDH.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-19T10:22:13.385Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ThongTinCaNhan.cshtml",
+              "DocumentMoniker": "D:\\NhaSachMetMoiCNPM\\NhaSachMetMoi\\Views\\KhachHang\\ThongTinCaNhan.cshtml",
+              "RelativeDocumentMoniker": "NhaSachMetMoi\\Views\\KhachHang\\ThongTinCaNhan.cshtml",
+              "ToolTip": "D:\\NhaSachMetMoiCNPM\\NhaSachMetMoi\\Views\\KhachHang\\ThongTinCaNhan.cshtml",
+              "RelativeToolTip": "NhaSachMetMoi\\Views\\KhachHang\\ThongTinCaNhan.cshtml",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAACQAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-16T13:00:22.494Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "BookingController.cs",
+              "DocumentMoniker": "D:\\NhaSachMetMoiCNPM\\NhaSachMetMoi\\Controllers\\BookingController.cs",
+              "RelativeDocumentMoniker": "NhaSachMetMoi\\Controllers\\BookingController.cs",
+              "ToolTip": "D:\\NhaSachMetMoiCNPM\\NhaSachMetMoi\\Controllers\\BookingController.cs",
+              "RelativeToolTip": "NhaSachMetMoi\\Controllers\\BookingController.cs",
+              "ViewState": "AgIAAI4AAAAAAAAAAAAkwGIAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-17T10:05:45.159Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "GioHangController.cs",
+              "DocumentMoniker": "D:\\NhaSachMetMoiCNPM\\NhaSachMetMoi\\Controllers\\GioHangController.cs",
+              "RelativeDocumentMoniker": "NhaSachMetMoi\\Controllers\\GioHangController.cs",
+              "ToolTip": "D:\\NhaSachMetMoiCNPM\\NhaSachMetMoi\\Controllers\\GioHangController.cs",
+              "RelativeToolTip": "NhaSachMetMoi\\Controllers\\GioHangController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-18T16:28:44.943Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "XacNhanDonHang.cshtml",
+              "DocumentMoniker": "D:\\NhaSachMetMoiCNPM\\NhaSachMetMoi\\Views\\GioHang\\XacNhanDonHang.cshtml",
+              "RelativeDocumentMoniker": "NhaSachMetMoi\\Views\\GioHang\\XacNhanDonHang.cshtml",
+              "ToolTip": "D:\\NhaSachMetMoiCNPM\\NhaSachMetMoi\\Views\\GioHang\\XacNhanDonHang.cshtml",
+              "RelativeToolTip": "NhaSachMetMoi\\Views\\GioHang\\XacNhanDonHang.cshtml",
+              "ViewState": "AgIAAGwAAAAAAAAAAAAAAH0AAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-17T17:04:07.675Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ChiTietBooking.cshtml",
+              "DocumentMoniker": "D:\\NhaSachMetMoiCNPM\\NhaSachMetMoi\\Views\\KhachHang\\ChiTietBooking.cshtml",
+              "RelativeDocumentMoniker": "NhaSachMetMoi\\Views\\KhachHang\\ChiTietBooking.cshtml",
+              "ToolTip": "D:\\NhaSachMetMoiCNPM\\NhaSachMetMoi\\Views\\KhachHang\\ChiTietBooking.cshtml",
+              "RelativeToolTip": "NhaSachMetMoi\\Views\\KhachHang\\ChiTietBooking.cshtml",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAADoAAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-18T15:28:13.308Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Layoutpage.cshtml",
+              "DocumentMoniker": "D:\\NhaSachMetMoiCNPM\\NhaSachMetMoi\\Views\\Shared\\Layoutpage.cshtml",
+              "RelativeDocumentMoniker": "NhaSachMetMoi\\Views\\Shared\\Layoutpage.cshtml",
+              "ToolTip": "D:\\NhaSachMetMoiCNPM\\NhaSachMetMoi\\Views\\Shared\\Layoutpage.cshtml",
+              "RelativeToolTip": "NhaSachMetMoi\\Views\\Shared\\Layoutpage.cshtml",
+              "ViewState": "AgIAAHUAAAAAAAAAAAAgwI0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-31T14:33:04.178Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "SuaTTCN.cshtml",
+              "DocumentMoniker": "D:\\NhaSachMetMoiCNPM\\NhaSachMetMoi\\Views\\KhachHang\\SuaTTCN.cshtml",
+              "RelativeDocumentMoniker": "NhaSachMetMoi\\Views\\KhachHang\\SuaTTCN.cshtml",
+              "ToolTip": "D:\\NhaSachMetMoiCNPM\\NhaSachMetMoi\\Views\\KhachHang\\SuaTTCN.cshtml",
+              "RelativeToolTip": "NhaSachMetMoi\\Views\\KhachHang\\SuaTTCN.cshtml",
+              "ViewState": "AgIAAGkAAAAAAAAAAAAAAHoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-16T13:00:17.856Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Dathangthanhcong.cshtml",
+              "DocumentMoniker": "D:\\NhaSachMetMoiCNPM\\NhaSachMetMoi\\Views\\GioHang\\Dathangthanhcong.cshtml",
+              "RelativeDocumentMoniker": "NhaSachMetMoi\\Views\\GioHang\\Dathangthanhcong.cshtml",
+              "ToolTip": "D:\\NhaSachMetMoiCNPM\\NhaSachMetMoi\\Views\\GioHang\\Dathangthanhcong.cshtml",
+              "RelativeToolTip": "NhaSachMetMoi\\Views\\GioHang\\Dathangthanhcong.cshtml",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAADQAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-10T17:05:32.809Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "D:\\NhaSachMetMoiCNPM\\NhaSachMetMoi\\Views\\Admin\\Edit.cshtml",
+              "RelativeDocumentMoniker": "NhaSachMetMoi\\Views\\Admin\\Edit.cshtml",
+              "ToolTip": "D:\\NhaSachMetMoiCNPM\\NhaSachMetMoi\\Views\\Admin\\Edit.cshtml",
+              "RelativeToolTip": "NhaSachMetMoi\\Views\\Admin\\Edit.cshtml",
+              "ViewState": "AgIAAK8AAAAAAAAAAAAwwNEAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-14T14:51:52.858Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "D:\\NhaSachMetMoiCNPM\\NhaSachMetMoi\\Views\\Admin\\Delete.cshtml",
+              "RelativeDocumentMoniker": "NhaSachMetMoi\\Views\\Admin\\Delete.cshtml",
+              "ToolTip": "D:\\NhaSachMetMoiCNPM\\NhaSachMetMoi\\Views\\Admin\\Delete.cshtml",
+              "RelativeToolTip": "NhaSachMetMoi\\Views\\Admin\\Delete.cshtml",
+              "ViewState": "AgIAAKYAAAAAAAAAAAAcwLEAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-14T13:29:38.075Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "D:\\NhaSachMetMoiCNPM\\NhaSachMetMoi\\Views\\Admin\\Create.cshtml",
+              "RelativeDocumentMoniker": "NhaSachMetMoi\\Views\\Admin\\Create.cshtml",
+              "ToolTip": "D:\\NhaSachMetMoiCNPM\\NhaSachMetMoi\\Views\\Admin\\Create.cshtml",
+              "RelativeToolTip": "NhaSachMetMoi\\Views\\Admin\\Create.cshtml",
+              "ViewState": "AgIAAPwAAAAAAAAAAAAAwAwBAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-16T13:11:03.39Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "IndexAd.cshtml",
+              "DocumentMoniker": "D:\\NhaSachMetMoiCNPM\\NhaSachMetMoi\\Views\\Admin\\IndexAd.cshtml",
+              "RelativeDocumentMoniker": "NhaSachMetMoi\\Views\\Admin\\IndexAd.cshtml",
+              "ToolTip": "D:\\NhaSachMetMoiCNPM\\NhaSachMetMoi\\Views\\Admin\\IndexAd.cshtml",
+              "RelativeToolTip": "NhaSachMetMoi\\Views\\Admin\\IndexAd.cshtml",
+              "ViewState": "AgIAAIYAAAAAAAAAAAAAANIAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-14T10:48:37.263Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Ketquatimkiem.cshtml",
+              "DocumentMoniker": "D:\\NhaSachMetMoiCNPM\\NhaSachMetMoi\\Views\\Tim\\Ketquatimkiem.cshtml",
+              "RelativeDocumentMoniker": "NhaSachMetMoi\\Views\\Tim\\Ketquatimkiem.cshtml",
+              "ToolTip": "D:\\NhaSachMetMoiCNPM\\NhaSachMetMoi\\Views\\Tim\\Ketquatimkiem.cshtml",
+              "RelativeToolTip": "NhaSachMetMoi\\Views\\Tim\\Ketquatimkiem.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-18T12:59:31.988Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "SachTL.cshtml",
+              "DocumentMoniker": "D:\\NhaSachMetMoiCNPM\\NhaSachMetMoi\\Views\\Trangchu\\SachTL.cshtml",
+              "RelativeDocumentMoniker": "NhaSachMetMoi\\Views\\Trangchu\\SachTL.cshtml",
+              "ToolTip": "D:\\NhaSachMetMoiCNPM\\NhaSachMetMoi\\Views\\Trangchu\\SachTL.cshtml",
+              "RelativeToolTip": "NhaSachMetMoi\\Views\\Trangchu\\SachTL.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAACGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-18T09:43:04.419Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "TimController.cs",
+              "DocumentMoniker": "D:\\NhaSachMetMoiCNPM\\NhaSachMetMoi\\Controllers\\TimController.cs",
+              "RelativeDocumentMoniker": "NhaSachMetMoi\\Controllers\\TimController.cs",
+              "ToolTip": "D:\\NhaSachMetMoiCNPM\\NhaSachMetMoi\\Controllers\\TimController.cs",
+              "RelativeToolTip": "NhaSachMetMoi\\Controllers\\TimController.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAiwEUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-18T12:59:36.945Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "XemCT.cshtml",
+              "DocumentMoniker": "D:\\NhaSachMetMoiCNPM\\NhaSachMetMoi\\Views\\Trangchu\\XemCT.cshtml",
+              "RelativeDocumentMoniker": "NhaSachMetMoi\\Views\\Trangchu\\XemCT.cshtml",
+              "ToolTip": "D:\\NhaSachMetMoiCNPM\\NhaSachMetMoi\\Views\\Trangchu\\XemCT.cshtml",
+              "RelativeToolTip": "NhaSachMetMoi\\Views\\Trangchu\\XemCT.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-14T15:53:38.415Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "IndexB.cshtml",
+              "DocumentMoniker": "D:\\NhaSachMetMoiCNPM\\NhaSachMetMoi\\Views\\Admin\\IndexB.cshtml",
+              "RelativeDocumentMoniker": "NhaSachMetMoi\\Views\\Admin\\IndexB.cshtml",
+              "ToolTip": "D:\\NhaSachMetMoiCNPM\\NhaSachMetMoi\\Views\\Admin\\IndexB.cshtml",
+              "RelativeToolTip": "NhaSachMetMoi\\Views\\Admin\\IndexB.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvx8AAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-17T09:16:35.768Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "KhachHang.cs",
+              "DocumentMoniker": "D:\\NhaSachMetMoiCNPM\\NhaSachMetMoi\\Models\\KhachHang.cs",
+              "RelativeDocumentMoniker": "NhaSachMetMoi\\Models\\KhachHang.cs",
+              "ToolTip": "D:\\NhaSachMetMoiCNPM\\NhaSachMetMoi\\Models\\KhachHang.cs",
+              "RelativeToolTip": "NhaSachMetMoi\\Models\\KhachHang.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-17T16:46:54.337Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "Confirmation.cshtml",
+              "DocumentMoniker": "D:\\NhaSachMetMoiCNPM\\NhaSachMetMoi\\Views\\Booking\\Confirmation.cshtml",
+              "RelativeDocumentMoniker": "NhaSachMetMoi\\Views\\Booking\\Confirmation.cshtml",
+              "ToolTip": "D:\\NhaSachMetMoiCNPM\\NhaSachMetMoi\\Views\\Booking\\Confirmation.cshtml",
+              "RelativeToolTip": "NhaSachMetMoi\\Views\\Booking\\Confirmation.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-05T07:08:56.922Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "DeleteB.cshtml",
+              "DocumentMoniker": "D:\\NhaSachMetMoiCNPM\\NhaSachMetMoi\\Views\\Admin\\DeleteB.cshtml",
+              "RelativeDocumentMoniker": "NhaSachMetMoi\\Views\\Admin\\DeleteB.cshtml",
+              "ToolTip": "D:\\NhaSachMetMoiCNPM\\NhaSachMetMoi\\Views\\Admin\\DeleteB.cshtml",
+              "RelativeToolTip": "NhaSachMetMoi\\Views\\Admin\\DeleteB.cshtml",
+              "ViewState": "AgIAACkAAAAAAAAAAADwvz4AAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-17T10:36:26.396Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "EditB.cshtml",
+              "DocumentMoniker": "D:\\NhaSachMetMoiCNPM\\NhaSachMetMoi\\Views\\Admin\\EditB.cshtml",
+              "RelativeDocumentMoniker": "NhaSachMetMoi\\Views\\Admin\\EditB.cshtml",
+              "ToolTip": "D:\\NhaSachMetMoiCNPM\\NhaSachMetMoi\\Views\\Admin\\EditB.cshtml",
+              "RelativeToolTip": "NhaSachMetMoi\\Views\\Admin\\EditB.cshtml",
+              "ViewState": "AgIAADoAAAAAAAAAAAAwwFIAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-17T09:17:32.325Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "DetailsB.cshtml",
+              "DocumentMoniker": "D:\\NhaSachMetMoiCNPM\\NhaSachMetMoi\\Views\\Admin\\DetailsB.cshtml",
+              "RelativeDocumentMoniker": "NhaSachMetMoi\\Views\\Admin\\DetailsB.cshtml",
+              "ToolTip": "D:\\NhaSachMetMoiCNPM\\NhaSachMetMoi\\Views\\Admin\\DetailsB.cshtml",
+              "RelativeToolTip": "NhaSachMetMoi\\Views\\Admin\\DetailsB.cshtml",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAADgAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-17T14:14:10.25Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "StyleSheet1.css",
+              "DocumentMoniker": "D:\\NhaSachMetMoiCNPM\\NhaSachMetMoi\\Content\\StyleSheet1.css",
+              "RelativeDocumentMoniker": "NhaSachMetMoi\\Content\\StyleSheet1.css",
+              "ToolTip": "D:\\NhaSachMetMoiCNPM\\NhaSachMetMoi\\Content\\StyleSheet1.css",
+              "RelativeToolTip": "NhaSachMetMoi\\Content\\StyleSheet1.css",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAAA0AAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-11-17T10:40:21.771Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\NhaSachMetMoiCNPM\\NhaSachMetMoi\\Views\\Booking\\Index.cshtml",
+              "RelativeDocumentMoniker": "NhaSachMetMoi\\Views\\Booking\\Index.cshtml",
+              "ToolTip": "D:\\NhaSachMetMoiCNPM\\NhaSachMetMoi\\Views\\Booking\\Index.cshtml",
+              "RelativeToolTip": "NhaSachMetMoi\\Views\\Booking\\Index.cshtml",
+              "ViewState": "AgIAAGMAAAAAAAAAAAAAAH0AAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-17T05:35:39.818Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "DetailDH.cshtml",
+              "DocumentMoniker": "D:\\NhaSachMetMoiCNPM\\NhaSachMetMoi\\Views\\Admin\\DetailDH.cshtml",
+              "RelativeDocumentMoniker": "NhaSachMetMoi\\Views\\Admin\\DetailDH.cshtml",
+              "ToolTip": "D:\\NhaSachMetMoiCNPM\\NhaSachMetMoi\\Views\\Admin\\DetailDH.cshtml",
+              "RelativeToolTip": "NhaSachMetMoi\\Views\\Admin\\DetailDH.cshtml",
+              "ViewState": "AgIAAEoAAAAAAAAAAAAwwKMAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-14T15:33:19.19Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "EditDH.cshtml",
+              "DocumentMoniker": "D:\\NhaSachMetMoiCNPM\\NhaSachMetMoi\\Views\\Admin\\EditDH.cshtml",
+              "RelativeDocumentMoniker": "NhaSachMetMoi\\Views\\Admin\\EditDH.cshtml",
+              "ToolTip": "D:\\NhaSachMetMoiCNPM\\NhaSachMetMoi\\Views\\Admin\\EditDH.cshtml",
+              "RelativeToolTip": "NhaSachMetMoi\\Views\\Admin\\EditDH.cshtml",
+              "ViewState": "AgIAABcAAAAAAAAAAAAgwDUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-14T15:34:06.7Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "D:\\NhaSachMetMoiCNPM\\NhaSachMetMoi\\Views\\Admin\\Details.cshtml",
+              "RelativeDocumentMoniker": "NhaSachMetMoi\\Views\\Admin\\Details.cshtml",
+              "ToolTip": "D:\\NhaSachMetMoiCNPM\\NhaSachMetMoi\\Views\\Admin\\Details.cshtml",
+              "RelativeToolTip": "NhaSachMetMoi\\Views\\Admin\\Details.cshtml",
+              "ViewState": "AgIAADAAAAAAAAAAAAAcwE4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-14T14:51:36.616Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "DetailKH.cshtml",
+              "DocumentMoniker": "D:\\NhaSachMetMoiCNPM\\NhaSachMetMoi\\Views\\Admin\\DetailKH.cshtml",
+              "RelativeDocumentMoniker": "NhaSachMetMoi\\Views\\Admin\\DetailKH.cshtml",
+              "ToolTip": "D:\\NhaSachMetMoiCNPM\\NhaSachMetMoi\\Views\\Admin\\DetailKH.cshtml",
+              "RelativeToolTip": "NhaSachMetMoi\\Views\\Admin\\DetailKH.cshtml",
+              "ViewState": "AgIAAG4AAAAAAAAAAAAcwIwAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-14T15:00:31.989Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "EditKH.cshtml",
+              "DocumentMoniker": "D:\\NhaSachMetMoiCNPM\\NhaSachMetMoi\\Views\\Admin\\EditKH.cshtml",
+              "RelativeDocumentMoniker": "NhaSachMetMoi\\Views\\Admin\\EditKH.cshtml",
+              "ToolTip": "D:\\NhaSachMetMoiCNPM\\NhaSachMetMoi\\Views\\Admin\\EditKH.cshtml",
+              "RelativeToolTip": "NhaSachMetMoi\\Views\\Admin\\EditKH.cshtml",
+              "ViewState": "AgIAAHEAAAAAAAAAAAAcwI8AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-14T15:03:26.795Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "DeleteKH.cshtml",
+              "DocumentMoniker": "D:\\NhaSachMetMoiCNPM\\NhaSachMetMoi\\Views\\Admin\\DeleteKH.cshtml",
+              "RelativeDocumentMoniker": "NhaSachMetMoi\\Views\\Admin\\DeleteKH.cshtml",
+              "ToolTip": "D:\\NhaSachMetMoiCNPM\\NhaSachMetMoi\\Views\\Admin\\DeleteKH.cshtml",
+              "RelativeToolTip": "NhaSachMetMoi\\Views\\Admin\\DeleteKH.cshtml",
+              "ViewState": "AgIAAHcAAAAAAAAAAAAcwJUAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-14T14:49:09.282Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "IndexTK.cshtml",
+              "DocumentMoniker": "D:\\NhaSachMetMoiCNPM\\NhaSachMetMoi\\Views\\DangNhap\\IndexTK.cshtml",
+              "RelativeDocumentMoniker": "NhaSachMetMoi\\Views\\DangNhap\\IndexTK.cshtml",
+              "ToolTip": "D:\\NhaSachMetMoiCNPM\\NhaSachMetMoi\\Views\\DangNhap\\IndexTK.cshtml",
+              "RelativeToolTip": "NhaSachMetMoi\\Views\\DangNhap\\IndexTK.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-14T14:32:20.293Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "DeleteDH.cshtml",
+              "DocumentMoniker": "D:\\NhaSachMetMoiCNPM\\NhaSachMetMoi\\Views\\Admin\\DeleteDH.cshtml",
+              "RelativeDocumentMoniker": "NhaSachMetMoi\\Views\\Admin\\DeleteDH.cshtml",
+              "ToolTip": "D:\\NhaSachMetMoiCNPM\\NhaSachMetMoi\\Views\\Admin\\DeleteDH.cshtml",
+              "RelativeToolTip": "NhaSachMetMoi\\Views\\Admin\\DeleteDH.cshtml",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-14T13:37:06.873Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "GioHangPartial.cshtml",
+              "DocumentMoniker": "D:\\NhaSachMetMoiCNPM\\NhaSachMetMoi\\Views\\GioHang\\GioHangPartial.cshtml",
+              "RelativeDocumentMoniker": "NhaSachMetMoi\\Views\\GioHang\\GioHangPartial.cshtml",
+              "ToolTip": "D:\\NhaSachMetMoiCNPM\\NhaSachMetMoi\\Views\\GioHang\\GioHangPartial.cshtml",
+              "RelativeToolTip": "NhaSachMetMoi\\Views\\GioHang\\GioHangPartial.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-10T17:05:26.849Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "GioHang.cshtml",
+              "DocumentMoniker": "D:\\NhaSachMetMoiCNPM\\NhaSachMetMoi\\Views\\GioHang\\GioHang.cshtml",
+              "RelativeDocumentMoniker": "NhaSachMetMoi\\Views\\GioHang\\GioHang.cshtml",
+              "ToolTip": "D:\\NhaSachMetMoiCNPM\\NhaSachMetMoi\\Views\\GioHang\\GioHang.cshtml",
+              "RelativeToolTip": "NhaSachMetMoi\\Views\\GioHang\\GioHang.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-10T17:04:46.358Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "SuaXacNhanTT.cshtml",
+              "DocumentMoniker": "D:\\NhaSachMetMoiCNPM\\NhaSachMetMoi\\Views\\GioHang\\SuaXacNhanTT.cshtml",
+              "RelativeDocumentMoniker": "NhaSachMetMoi\\Views\\GioHang\\SuaXacNhanTT.cshtml",
+              "ToolTip": "D:\\NhaSachMetMoiCNPM\\NhaSachMetMoi\\Views\\GioHang\\SuaXacNhanTT.cshtml",
+              "RelativeToolTip": "NhaSachMetMoi\\Views\\GioHang\\SuaXacNhanTT.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-10T17:05:23.92Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "Dathang.cshtml",
+              "DocumentMoniker": "D:\\NhaSachMetMoiCNPM\\NhaSachMetMoi\\Views\\GioHang\\Dathang.cshtml",
+              "RelativeDocumentMoniker": "NhaSachMetMoi\\Views\\GioHang\\Dathang.cshtml",
+              "ToolTip": "D:\\NhaSachMetMoiCNPM\\NhaSachMetMoi\\Views\\GioHang\\Dathang.cshtml",
+              "RelativeToolTip": "NhaSachMetMoi\\Views\\GioHang\\Dathang.cshtml",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-10T17:05:36.466Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "Web.config",
+              "DocumentMoniker": "D:\\NhaSachMetMoiCNPM\\NhaSachMetMoi\\Web.config",
+              "RelativeDocumentMoniker": "NhaSachMetMoi\\Web.config",
+              "ToolTip": "D:\\NhaSachMetMoiCNPM\\NhaSachMetMoi\\Web.config",
+              "RelativeToolTip": "NhaSachMetMoi\\Web.config",
+              "ViewState": "AgIAAE8AAAAAAAAAAAAYwGgAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2024-11-05T03:23:21.852Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "Web.config",
+              "DocumentMoniker": "D:\\NhaSachMetMoiCNPM\\NhaSachMetMoi\\Views\\Web.config",
+              "RelativeDocumentMoniker": "NhaSachMetMoi\\Views\\Web.config",
+              "ToolTip": "D:\\NhaSachMetMoiCNPM\\NhaSachMetMoi\\Views\\Web.config",
+              "RelativeToolTip": "NhaSachMetMoi\\Views\\Web.config",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAYwDQAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2024-11-05T15:20:50.33Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "Web.Debug.config",
+              "DocumentMoniker": "D:\\NhaSachMetMoiCNPM\\NhaSachMetMoi\\Web.Debug.config",
+              "RelativeDocumentMoniker": "NhaSachMetMoi\\Web.Debug.config",
+              "ToolTip": "D:\\NhaSachMetMoiCNPM\\NhaSachMetMoi\\Web.Debug.config",
+              "RelativeToolTip": "NhaSachMetMoi\\Web.Debug.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2024-11-05T15:48:25.209Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "booking.css",
+              "DocumentMoniker": "D:\\NhaSachMetMoiCNPM\\NhaSachMetMoi\\Content\\booking.css",
+              "RelativeDocumentMoniker": "NhaSachMetMoi\\Content\\booking.css",
+              "ToolTip": "D:\\NhaSachMetMoiCNPM\\NhaSachMetMoi\\Content\\booking.css",
+              "RelativeToolTip": "NhaSachMetMoi\\Content\\booking.css",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAAAGQAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-11-05T06:21:00.119Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "NhaSach.edmx.diagram",
+              "DocumentMoniker": "D:\\NhaSachMetMoiCNPM\\NhaSachMetMoi\\Models\\NhaSach.edmx.diagram",
+              "RelativeDocumentMoniker": "NhaSachMetMoi\\Models\\NhaSach.edmx.diagram",
+              "ToolTip": "D:\\NhaSachMetMoiCNPM\\NhaSachMetMoi\\Models\\NhaSach.edmx.diagram",
+              "RelativeToolTip": "NhaSachMetMoi\\Models\\NhaSach.edmx.diagram",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-11-05T03:26:47.15Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "NhaSach.Context.cs",
+              "DocumentMoniker": "D:\\NhaSachMetMoiCNPM\\NhaSachMetMoi\\Models\\NhaSach.Context.cs",
+              "RelativeDocumentMoniker": "NhaSachMetMoi\\Models\\NhaSach.Context.cs",
+              "ToolTip": "D:\\NhaSachMetMoiCNPM\\NhaSachMetMoi\\Models\\NhaSach.Context.cs",
+              "RelativeToolTip": "NhaSachMetMoi\\Models\\NhaSach.Context.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAQwBwAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-05T03:25:58.247Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "GioHang.cs",
+              "DocumentMoniker": "D:\\NhaSachMetMoiCNPM\\NhaSachMetMoi\\Models\\GioHang.cs",
+              "RelativeDocumentMoniker": "NhaSachMetMoi\\Models\\GioHang.cs",
+              "ToolTip": "D:\\NhaSachMetMoiCNPM\\NhaSachMetMoi\\Models\\GioHang.cs",
+              "RelativeToolTip": "NhaSachMetMoi\\Models\\GioHang.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAA3wAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-05T04:33:41.719Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "NhaSach.Context.tt",
+              "DocumentMoniker": "D:\\NhaSachMetMoiCNPM\\NhaSachMetMoi\\Models\\NhaSach.Context.tt",
+              "RelativeDocumentMoniker": "NhaSachMetMoi\\Models\\NhaSach.Context.tt",
+              "ToolTip": "D:\\NhaSachMetMoiCNPM\\NhaSachMetMoi\\Models\\NhaSach.Context.tt",
+              "RelativeToolTip": "NhaSachMetMoi\\Models\\NhaSach.Context.tt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2024-11-05T03:59:12.799Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 54,
+              "Title": "AssemblyInfo.cs",
+              "DocumentMoniker": "D:\\NhaSachMetMoiCNPM\\NhaSachMetMoi\\Properties\\AssemblyInfo.cs",
+              "RelativeDocumentMoniker": "NhaSachMetMoi\\Properties\\AssemblyInfo.cs",
+              "ToolTip": "D:\\NhaSachMetMoiCNPM\\NhaSachMetMoi\\Properties\\AssemblyInfo.cs",
+              "RelativeToolTip": "NhaSachMetMoi\\Properties\\AssemblyInfo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-04T09:49:47.073Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

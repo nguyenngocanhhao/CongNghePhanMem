@@ -1,0 +1,309 @@
+﻿@using PagedList;
+@using PagedList.Mvc;
+@model PagedList.PagedList<NhaSachMetMoi.Models.DonHang>
+
+@{
+    ViewBag.Title = "IndexDH";
+    Layout = "~/Views/Shared/Admin.cshtml";
+    <link href="~/Content/StyleSheet1.css" rel="stylesheet" />
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Đảm bảo jQuery được tải trước khi chạy các script khác -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+}
+
+<div class="container mt-5">
+    <h1 class="text-center">Quản lý đơn hàng</h1>
+    <div class="d-flex justify-content-between align-items-center mb-3">
+    </div>
+    <div class="table-responsive mt-4">
+        <table class="table table-bordered table-hover text-center">
+            <thead class="thead-dark">
+                <tr>
+                    <th><a href="@Url.Action("IndexDH", new { sortOrder = ViewBag.OrderIdSortParm })" style="color: inherit; text-decoration: none;">Mã đơn hàng <i class="fa fa-sort"></i></a></th>
+                    <th><a href="@Url.Action("IndexDH", new { sortOrder = ViewBag.OrderDateSortParm })" style="color: inherit; text-decoration: none;">Ngày đặt hàng <i class="fa fa-sort"></i></a></th>
+                    <th><a href="@Url.Action("IndexDH", new { sortOrder = ViewBag.DeliveryDateSortParm })" style="color: inherit; text-decoration: none;">Ngày giao dự kiến <i class="fa fa-sort"></i></a></th>
+                    <th><a href="@Url.Action("IndexDH", new { sortOrder = ViewBag.CustomerIdSortParm })" style="color: inherit; text-decoration: none;">Mã khách hàng <i class="fa fa-sort"></i></a></th>
+                    <th><a href="@Url.Action("IndexDH", new { sortOrder = ViewBag.CustomerNameSortParm })" style="color: inherit; text-decoration: none;">Tên khách hàng <i class="fa fa-sort"></i></a></th>
+                    <th><a href="@Url.Action("IndexDH", new { sortOrder = ViewBag.StatusSortParm })" style="color: inherit; text-decoration: none;">Trạng thái <i class="fa fa-sort"></i></a></th>
+                    <th>Thao tác</th>
+                    <th>Vô hiệu hóa</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr id="order-@item.MaDH">
+                        <td>@Html.DisplayFor(modelItem => item.MaDH)</td>
+                        <td>@Html.DisplayFor(modelItem => item.NgayDat)</td>
+                        <td class="delivery-date">@Html.DisplayFor(modelItem => item.NgayGiao)</td>
+                        <td>@Html.DisplayFor(modelItem => item.MaKH)</td>
+                        <td>@Html.DisplayFor(modelItem => item.KH.HoTen)</td>
+                        <td id="status-@item.MaDH">@item.TrangThai</td>
+
+                        <td>
+                            <div class="d-flex justify-content-center">
+                                <a href="@Url.Action("DetailDH", new { @MaDH = item.MaDH })" class="btn btn-info btn-sm mx-1" title="Chi Tiết">
+                                    <i class="fas fa-info-circle"></i>
+                                </a>
+                            </div>
+                        </td>
+                        <td>
+                            <button class="btn btn-secondary btn-sm disable-btn" data-order-id="@item.MaDH" title="Vô hiệu hóa">
+                                <i class="fas fa-ban"></i>
+                            </button>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    <div class="pagination1">
+        @Html.PagedListPager(Model, page => Url.Action("IndexDH", new { page = page }))
+    </div>
+</div>
+
+<script>
+
+$(document).ready(function () {
+    console.log("Document ready. Initializing disable order function and updating delivered orders.");
+
+    // Khởi tạo trạng thái vô hiệu hóa từ localStorage
+    $('tr[id^="order-"]').each(function () {
+        var orderId = $(this).attr('id').split('-')[1];
+        if (localStorage.getItem('disabled-' + orderId) === 'true') {
+            console.log("Order " + orderId + " was previously disabled. Disabling now.");
+            disableOrder(orderId, true);
+        }
+
+        // Kiểm tra ngày giao dự kiến và cập nhật trạng thái đơn hàng
+        var deliveryDateText = $(this).find('.delivery-date').text();
+        if (deliveryDateText) {
+            var deliveryDate = new Date(deliveryDateText);
+            var currentDate = new Date();
+
+            // Chuyển đổi ngày hiện tại thành không có giờ, phút, giây để so sánh
+            currentDate.setHours(0, 0, 0, 0);
+            deliveryDate.setHours(0, 0, 0, 0);
+
+            if (deliveryDate.getTime() <= currentDate.getTime()) {
+                $.ajax({
+                    type: "POST",
+                    url: "@Url.Action("UpdateOrderStatus", "Admin")",
+                    data: { MaDH: orderId, TrangThai: "Đã giao" },
+                    success: function (response) {
+                        if (response.success) {
+                            updateOrderStatus(orderId, 'Đã giao');
+                        } else {
+                            console.log("Không thể cập nhật trạng thái đơn hàng.");
+                        }
+                    },
+                    error: function () {
+                        console.log("Đã xảy ra lỗi khi cập nhật trạng thái đơn hàng.");
+                    }
+                });
+            }
+        }
+    });
+
+    // Khi nhấn nút "Vô hiệu hóa"
+    $('.disable-btn').on('click', function () {
+        var orderId = $(this).data('order-id');
+        var isCurrentlyDisabled = localStorage.getItem('disabled-' + orderId) === 'true';
+        var confirmMessage = isCurrentlyDisabled
+            ? "Bạn có chắc chắn muốn bỏ vô hiệu hóa đơn hàng này không?"
+            : "Bạn có chắc chắn muốn vô hiệu hóa đơn hàng này không?";
+
+        if (confirm(confirmMessage)) {
+            $.ajax({
+                type: "POST",
+                url: "@Url.Action("DisableDH", "Admin")",
+                data: { MaDH: orderId, isDisabled: !isCurrentlyDisabled },
+                success: function (response) {
+                    if (response.success) {
+                        disableOrder(orderId, !isCurrentlyDisabled);
+                        localStorage.setItem('disabled-' + orderId, !isCurrentlyDisabled);
+                    } else {
+                        alert("Không thể cập nhật trạng thái đơn hàng.");
+                    }
+                },
+                error: function () {
+                    alert("Đã xảy ra lỗi khi cập nhật trạng thái đơn hàng.");
+                }
+            });
+        }
+    });
+
+    function disableOrder(orderId, isDisabled) {
+        var row = $('#order-' + orderId);
+        var statusCell = $('#status-' + orderId);
+
+        if (isDisabled) {
+            row.addClass('disabled-order');
+            statusCell.text('Bị hủy');
+            console.log("Đơn hàng", orderId, "đã bị vô hiệu hóa.");
+        } else {
+            row.removeClass('disabled-order');
+            statusCell.text('Hoạt động');
+            console.log("Đơn hàng", orderId, "đã được kích hoạt lại.");
+        }
+    }
+
+    function updateOrderStatus(orderId, status) {
+        var statusCell = $('#status-' + orderId);
+        statusCell.text(status);
+        console.log("Trạng thái của đơn hàng", orderId, "đã được cập nhật thành", status);
+    }
+});
+
+
+
+
+</script>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $("#searchBox").on("keyup", function () {
+            var value = $(this).val().toLowerCase();
+            $("#orderTableBody tr").filter(function () {
+                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+            });
+        });
+    });
+</script>
+<style>
+    .disabled-order {
+        background-color: #f5f5f5 !important;
+        color: #999 !important;
+    }
+
+        .disabled-order a {
+            pointer-events: none;
+            cursor: default;
+            color: #999 !important;
+        }
+
+        /* Không vô hiệu hóa nút disable để có thể nhấp lại */
+        .disabled-order td {
+            text-decoration: line-through;
+        }
+</style>
+<style>
+    .product-table-container {
+        padding: 15px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .product-thumbnail {
+        width: 60px;
+        height: 75px;
+    }
+
+    .action-buttons a {
+        display: inline-block;
+        color: #ffffff;
+    }
+
+        .action-buttons a:hover {
+            color: #ffffff;
+        }
+
+    .pagination-container {
+        margin-top: 20px;
+    }
+
+    .navigation {
+        position: fixed;
+        width: 18%;
+        height: 100%;
+        background-color: #2E8B57;
+        color: #FFFACD;
+        transition: 0.5s;
+        left: 0;
+        top: 0;
+    }
+
+    .main {
+        position: relative;
+        width: 113%;
+        left: 6%;
+        min-height: 100vh;
+        background-color: whitesmoke;
+        transition: 0.5s;
+    }
+
+    .sort-link {
+        color: #ffffff;
+        text-decoration: none;
+    }
+
+        .sort-link:hover {
+            color: #ffffff;
+        }
+
+    .sort-icon {
+        color: #ffffff;
+    }
+</style>
+<style>
+    .product-table-container {
+        padding: 15px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .product-thumbnail {
+        width: 60px;
+        height: 75px;
+    }
+
+    .action-buttons a {
+        display: inline-block;
+        color: #ffffff;
+    }
+
+        .action-buttons a:hover {
+            color: #ffffff;
+        }
+
+    .pagination-container {
+        margin-top: 20px;
+    }
+
+    .navigation {
+        position: fixed;
+        width: 18%;
+        height: 100%;
+        background-color: #2E8B57;
+        color: #FFFACD;
+        transition: 0.5s;
+        left: 0;
+        top: 0;
+    }
+
+    .main {
+        position: relative;
+        width: 113%;
+        left: 6%;
+        min-height: 100vh;
+        background-color: whitesmoke;
+        transition: 0.5s;
+    }
+
+    .sort-link {
+        color: #ffffff;
+        text-decoration: none;
+    }
+
+        .sort-link:hover {
+            color: #ffffff;
+        }
+
+    .sort-icon {
+        color: #ffffff;
+    }
+</style>

@@ -1,0 +1,67 @@
+﻿@model NhaSachMetMoi.Models.KH
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/Layoutpage.cshtml";
+    <link href="~/Content/Layoutpage.css" rel="stylesheet" />
+   
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thông Tin Cá Nhân</title>
+    <link rel="stylesheet" href="~/Content/Site.css">
+    <link href="~/Content/Layoutpage.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/Content/PersonalInfo.css"> <!-- Thêm CSS riêng cho thông tin cá nhân -->
+</head>
+<body>
+    <div class="container mt-5 personal-info-container" style="background:#ffffff">
+        <h1 class="text-center mb-4 personal-info-header" style="color:#333333">Thông Tin Cá Nhân</h1>
+        <div class="table-responsive">
+            <table class="table table-bordered table-striped personal-info-table">
+                <tbody>
+                    <tr>
+                        <th>Họ tên:</th>
+                        <td>@Model.HoTen</td>
+                    </tr>
+                    <tr>
+                        <th>Điện thoại:</th>
+                        <td>@Model.DienThoai</td>
+                        <th>Email:</th>
+                        <td>@Model.Email</td>
+                    </tr>
+                    <tr>
+                        <th>Địa Chỉ:</th>
+                        <td colspan="3">@Model.DiaChi</td>
+                    </tr>
+                    <tr>
+                        <th>Ngày Sinh:</th>
+                        <td>@(Model.NgaySinh.HasValue ? Model.NgaySinh.Value.ToString("dd/MM/yyyy") : "Không có dữ liệu")</td>
+                    </tr>
+                    <tr>
+                        <th>Tổng đơn hàng đã đặt:</th>
+                        <td>@ViewBag.TongSoDonHang</td>
+                        <th>Tổng số lịch booking đã đặt:</th>
+                        <td>@ViewBag.TongSoBooking</td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+        <div class="mt-4" style="display: flex; justify-content: space-evenly; ">
+            @*<a href="@Url.Action("SuaTTCN", "KhachHang", new { id = Model.MaKH })" class="btn btn-success btn-personal-info">Thay đổi thông tin</a>*@
+            <a href="@Url.Action("SuaTTCN", "KhachHang", new { id = Model.MaKH })" class="btn btn-personal-info" style="background: #2e8b57; color: #fffacd;  ">CHỈNH SỬA THÔNG TIN CÁ NHÂN</a>
+            <a href="@Url.Action("LichSuBooking", "KhachHang", new { id = Model.MaKH })" class="btn btn-personal-info" style="background: #2e8b57; color: #fffacd;  ">LỊCH BOOKING CỦA BẠN</a>
+
+            <a href="@Url.Action("LichSuDonHang", "KhachHang", new { id = Model.MaKH })" class="btn btn-personal-info" style="background: #2e8b57; color: #fffacd;  ">ĐƠN HÀNG CỦA BẠN</a>
+        </div>
+    </div>
+    <br />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,194 @@
+﻿@model NhaSachMetMoi.Models.Sach
+
+@{
+    ViewBag.Title = "Xóa Sách";
+    Layout = "~/Views/Shared/Admin.cshtml";
+}
+
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+<link href="~/Content/StyleSheet1.css" rel="stylesheet" />
+
+<div class="container mt-5">
+    <div class="card border-danger shadow-sm">
+        <div class="card-header bg-danger text-white">
+            <h3 class="mb-0 text-center h33">Xóa Sản Phẩm Sách</h3>
+        </div>
+        <div class="card-body">
+            <p class="text-danger font-weight-bold">Bạn có chắc chắn muốn xóa sản phẩm này?</p>
+            <dl class="row">
+                <dt class="col-sm-4">
+                    Mã sách:
+                </dt>
+                <dd class="col-sm-8">
+                    @Html.DisplayFor(model => model.MaSach)
+                </dd>
+
+                <dt class="col-sm-4">
+                    Tên sách:
+                </dt>
+                <dd class="col-sm-8">
+                    @Html.DisplayFor(model => model.TenSach)
+                </dd>
+
+                <dt class="col-sm-4">
+                    Giá tiền:
+                </dt>
+                <dd class="col-sm-8">
+                    @Html.DisplayFor(model => model.Gia)
+                </dd>
+
+                <dt class="col-sm-4">
+                    Nô tả:
+                </dt>
+                <dd class="col-sm-8">
+                    @Html.DisplayFor(model => model.MoTa)
+                </dd>
+
+                <dt class="col-sm-4">
+                    Ảnh bìa:
+                </dt>
+                <dd class="col-sm-8">
+                    <img src="@Url.Content("~/Content/images/sach/" + Model.AnhBia)" alt="Ảnh bìa" class="img-thumbnail" style="max-width: 150px;" />
+                </dd>
+
+                <dt class="col-sm-4">
+                    Năm xuất bản:
+                </dt>
+                <dd class="col-sm-8">
+                    @Html.DisplayFor(model => model.NamXB)
+                </dd>
+
+                <dt class="col-sm-4">
+                    Số lượng tồn:
+                </dt>
+                <dd class="col-sm-8">
+                    @Html.DisplayFor(model => model.SoLuongTon)
+                </dd>
+
+                <dt class="col-sm-4">
+                    Thể loại:
+                </dt>
+                <dd class="col-sm-8">
+                    @Html.DisplayFor(model => model.TL.TenTL)
+                </dd>
+
+                <dt class="col-sm-4">
+                    Tên tác giả:
+                </dt>
+                <dd class="col-sm-8">
+                    @Html.DisplayFor(model => model.TG.TenTG)
+                </dd>
+
+                <dt class="col-sm-4">
+                    Nhà xuất bản:
+                </dt>
+                <dd class="col-sm-8">
+                    @Html.DisplayFor(model => model.NXB.TenNXB)
+                </dd>
+
+                <dt class="col-sm-4">
+                    Sale:
+                </dt>
+                <dd class="col-sm-8">
+                    @Html.DisplayFor(model => model.Sale)
+                </dd>
+            </dl>
+        </div>
+        <div class="card-footer text-center">
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-danger">Xóa</button>
+                    @Html.ActionLink("Quay lại trang trước", "IndexAd", null, new { @class = "btn btn-secondary ml-2" })
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+<style>
+    /* Các style tùy chỉnh thêm */
+    body {
+        background-color: #f8f9fa;
+    }
+
+    .card {
+        max-width: 800px;
+        margin: auto;
+    }
+
+    .h33 {
+        color: #ffffff;
+    }
+
+    .btn-danger {
+        background-color: #e74c3c;
+        border-color: #e74c3c;
+    }
+
+        .btn-danger:hover {
+            background-color: #c0392b;
+            border-color: #c0392b;
+        }
+</style>
+<style>
+    .product-table-container {
+        padding: 15px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .product-thumbnail {
+        width: 60px;
+        height: 75px;
+    }
+
+    .action-buttons a {
+        display: inline-block;
+        color: #ffffff;
+    }
+
+        .action-buttons a:hover {
+            color: #ffffff;
+        }
+
+    .pagination-container {
+        margin-top: 20px;
+    }
+
+    .navigation {
+        position: fixed;
+        width: 18%;
+        height: 100%;
+        background-color: #2E8B57;
+        color: #FFFACD;
+        transition: 0.5s;
+        left: 0;
+        top: 0;
+    }
+
+    .main {
+        position: relative;
+        width: 113%;
+        left: 6%;
+        min-height: 100vh;
+        background-color: whitesmoke;
+        transition: 0.5s;
+    }
+
+    .sort-link {
+        color: #ffffff;
+        text-decoration: none;
+    }
+
+        .sort-link:hover {
+            color: #ffffff;
+        }
+
+    .sort-icon {
+        color: #ffffff;
+    }
+</style>

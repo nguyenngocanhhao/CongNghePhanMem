@@ -1,0 +1,144 @@
+﻿@using NhaSachMetMoi.Models;
+@model List<Sach>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/Layoutpage.cshtml";
+    <script src="~/Content/homepage.js"></script>
+
+}
+
+
+
+
+<section class="video-section">
+    <video autoplay loop muted class="background-video">
+        <source src="~/Content/Library.mp4" type="video/mp4">
+    </video>
+    <div class="content">
+        <h1>ATHENA LIBRARY</h1>
+
+        <!-- Nội dung khác -->
+    </div>
+</section>
+
+<section class="project-section">
+    <h2>Không Gian Học Tập</h2>
+    <div class="project-container">
+        <div class="project-item">
+            <a href="@Url.Action("Index", "Booking")">
+                <img src="~/Content/images/group.jpg" alt="Không có nơi nào như ở nhà">
+                <h3>Khu vực dành riêng cho học nhóm hoặc họp nhóm.</h3>
+            </a>
+        </div>
+        <div class="project-item">
+            <a href="@Url.Action("Index", "Booking")">
+                <img src="~/Content/images/private.jpg" alt="The Moody Blues">
+                <h3>Buồng học cá nhân yên tĩnh cho công việc tập trung.</h3>
+            </a>
+        </div>
+        <div class="project-item">
+            <a href="@Url.Action("Index", "Booking")">
+                <img src="~/Content/images/seat.jpg" alt="Đuổi Theo Mặt Trời">
+                <h3>Không gian ấm cúng như ở nhà.</h3>
+            </a>
+        </div>
+    </div>
+    <br />
+    <div class="project-container">
+        <div class="project-item">
+            <a href="@Url.Action("Index", "Booking")">
+                <img src="~/Content/images/emo.jpg" alt="Không có nơi nào như ở nhà">
+                <h3>Một không gian an ủi để cảm nhận sự hỗ trợ và giữ vững động lực.</h3>
+            </a>
+        </div>
+        <div class="project-item">
+            <a href="@Url.Action("Index", "Booking")">
+                <img src="~/Content/images/take.jpg" alt="The Moody Blues">
+                <h3>Một góc yên tĩnh để nạp lại năng lượng bằng một giấc ngủ ngắn.</h3>
+            </a>
+        </div>
+        <div class="project-item">
+            <a href="@Url.Action("Index", "Booking")">
+                <img src="~/Content/images/idel.jpg" alt="Đuổi Theo Mặt Trời">
+                <h3>Một không gian sáng sủa, gọn gàng giúp tăng năng suất và sự tập trung.</h3>
+            </a>
+        </div>
+    </div>
+</section>
+
+
+<section class="custom-slider-section">
+    <div class="content-wrapper">
+        <div class="background-text">ATHENA</div>
+        <div class="text-info">
+            <h2>
+                Thư viện &
+                Phòng học
+            </h2>
+            <p>Nếu bạn đang tìm kiếm một không gian yên tĩnh để tập trung hoặc một chỗ thoải mái để học cùng bạn bè, thư viện của chúng tôi cung cấp các không gian linh hoạt để đáp ứng mọi nhu cầu của bạn.</p>
+        </div>
+        <div class="image-slider">
+            <div class="slider-wrapper">
+                <div class="slider-item active">
+                    <img src="~/Content/images/lib1.jpg" alt="Commercial Services">
+                    <div class="overlay">
+                        <span class="label">Practice</span>
+                        <div class="image-title">Commercial Services</div>
+                    </div>
+                </div>
+                <div class="slider-item">
+                    <img src="~/Content/images/room4.jpg" alt="Higher Education">
+                    <div class="overlay">
+                        <span class="label">Market</span>
+                        <div class="image-title">Higher Education</div>
+                    </div>
+                </div>
+                <div class="slider-item">
+                    <img src="~/Content/images/room8.jpg" alt="Law Firms">
+                    <div class="overlay">
+                        <span class="label">Market</span>
+                        <div class="image-title">Law Firms</div>
+                    </div>
+                </div>
+            </div>
+            <button class="slider-btn prev-btn">&#10094;</button>
+            <button class="slider-btn next-btn">&#10095;</button>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="book-must-try-section">
+        <h2>Lựa chọn đáng thử</h2> <!-- or any title you choose -->
+        <div class="book-must-try-container">
+            @foreach (var item in Model.Where(m => m.MaTL == 2).Take(4))
+            {
+                <a href="@Url.Action("XemCT", "TrangChu", new { @masach = item.MaSach })" class="product-link">
+                    <div class="product">
+                        <div class="product-image">
+                            <img src="@Url.Content("~/Content/images/sach/" + item.AnhBia)" alt="Book Image" width="200" height="250">
+                            @if (item.Sale > 0)
+                            {
+                                <div class="thumb-discount-label">
+                                    <span>@item.Sale%</span>
+                                </div>
+                            }
+                        </div>
+                        <div class="product-title">
+                            <span>@item.TenSach</span>
+                        </div>
+                        <div class="product-price">
+                            <b class="discounted-price">@string.Format("{0:0,0}", (decimal)item.Gia * (1 - (int)item.Sale / 100m)).Replace(",", ".") VNĐ</b>
+                            @if (item.Sale > 0)
+                            {
+                                <del class="original-price">@string.Format("{0:0,0}", item.Gia).Replace(",", ".") VNĐ</del>
+                            }
+                        </div>
+                    </div>
+                </a>
+            }
+        </div>
+    </div>
+</section>
+
+

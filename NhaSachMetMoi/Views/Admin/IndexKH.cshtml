@@ -1,0 +1,128 @@
+﻿@using PagedList;
+@using PagedList.Mvc;
+@model PagedList.PagedList<NhaSachMetMoi.Models.KH>
+
+@{
+    ViewBag.Title = "IndexKH";
+    Layout = "~/Views/Shared/Admin.cshtml";
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/StyleSheet1.css" rel="stylesheet" />
+}
+
+<div class="container mt-5">
+    <h1 class="text-center">Quản lý khách hàng</h1>
+
+    <div class="table-responsive mt-4">
+        <table class="table table-bordered table-hover text-center">
+            <thead class="thead-dark">
+                <tr>
+                    <th>@Html.DisplayNameFor(model => model.First().MaKH)</th>
+                    <th>@Html.DisplayNameFor(model => model.First().HoTen)</th>
+                    <th>@Html.DisplayNameFor(model => model.First().TaiKhoan)</th>
+                    <th>@Html.DisplayNameFor(model => model.First().MatKhau)</th>
+                    <th>@Html.DisplayNameFor(model => model.First().Email)</th>
+                    <th>@Html.DisplayNameFor(model => model.First().DiaChi)</th>
+                    <th>@Html.DisplayNameFor(model => model.First().DienThoai)</th>
+                    <th>@Html.DisplayNameFor(model => model.First().NgaySinh)</th>
+                    <th>Thao tác</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@Html.DisplayFor(modelItem => item.MaKH)</td>
+                        <td>@Html.DisplayFor(modelItem => item.HoTen)</td>
+                        <td>@Html.DisplayFor(modelItem => item.TaiKhoan)</td>
+                        <td>@Html.DisplayFor(modelItem => item.MatKhau)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Email)</td>
+                        <td>@Html.DisplayFor(modelItem => item.DiaChi)</td>
+                        <td>@Html.DisplayFor(modelItem => item.DienThoai)</td>
+                        <td>@Html.DisplayFor(modelItem => item.NgaySinh)</td>
+                        <td>
+                            <div class="d-flex justify-content-center action-buttons">
+                                <a href="@Url.Action("EditKH", new { @MaKH = item.MaKH })" class="btn btn-warning btn-sm mx-1" title="Chỉnh Sửa">
+                                    <i class="fa fa-edit"></i>
+                                </a>
+                                <a href="@Url.Action("DetailKH", new { @MaKH = item.MaKH })" class="btn btn-info btn-sm mx-1" title="Chi Tiết">
+                                    <i class="fa fa-info-circle"></i>
+                                </a>
+                                <a href="@Url.Action("DeleteKH", new { @MaKH = item.MaKH })" class="btn btn-danger btn-sm mx-1" title="Xóa">
+                                    <i class="fa fa-trash"></i>
+                                </a>
+                            </div>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+    <div class="pagination1">
+        @Html.PagedListPager(Model, page => Url.Action("IndexKH", new { page = page }))
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<style>
+    .product-table-container {
+        padding: 15px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .product-thumbnail {
+        width: 60px;
+        height: 75px;
+    }
+
+    .action-buttons a {
+        display: inline-block;
+        color: #ffffff;
+    }
+
+        .action-buttons a:hover {
+            color: #ffffff;
+        }
+
+    .pagination-container {
+        margin-top: 20px;
+    }
+
+    .navigation {
+        position: fixed;
+        width: 18%;
+        height: 100%;
+        background-color: #2E8B57;
+        color: #FFFACD;
+        transition: 0.5s;
+        left: 0;
+        top: 0;
+    }
+
+    .main {
+        position: relative;
+        width: 113%;
+        left: 6%;
+        min-height: 100vh;
+        background-color: whitesmoke;
+        transition: 0.5s;
+    }
+
+    .sort-link {
+        color: #ffffff;
+        text-decoration: none;
+    }
+
+        .sort-link:hover {
+            color: #ffffff;
+        }
+
+    .sort-icon {
+        color: #ffffff;
+    }
+</style>

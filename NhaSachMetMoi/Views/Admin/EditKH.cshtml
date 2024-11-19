@@ -1,0 +1,144 @@
+﻿@model NhaSachMetMoi.Models.KH
+
+@{
+    ViewBag.Title = "Chỉnh Sửa Khách Hàng";
+    Layout = "~/Views/Shared/Admin.cshtml";
+}
+
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+<link href="~/Content/StyleSheet1.css" rel="stylesheet" />
+
+<div class="container mt-5">
+    <div class="card">
+        <div class="card-header">
+            <h1 class="text-center">Chỉnh Sửa Thông Tin Khách Hàng</h1>
+        </div>
+        <div class="card-body">
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+
+                <div class="form-group row">
+                    @Html.LabelFor(model => model.MaKH, "Mã khách hàng", new { @class = "col-sm-2 col-form-label font-weight-bold" })
+                    <div class="col-sm-10">
+                        <span class="form-control-plaintext">@Model.MaKH</span>
+                        @Html.Hidden("MaKH", Model.MaKH)
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    @Html.LabelFor(model => model.HoTen, "Họ tên" , new { @class = "col-sm-2 col-form-label font-weight-bold" })
+                    <div class="col-sm-10">
+                        @Html.EditorFor(model => model.HoTen, new { htmlAttributes = new { @class = "form-control" } })
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    @Html.LabelFor(model => model.TaiKhoan, "Tài khoản", new { @class = "col-sm-2 col-form-label font-weight-bold" })
+                    <div class="col-sm-10">
+                        @Html.EditorFor(model => model.TaiKhoan, new { htmlAttributes = new { @class = "form-control" } })
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    @Html.LabelFor(model => model.MatKhau, "Mật khẩu", new { @class = "col-sm-2 col-form-label font-weight-bold" })
+                    <div class="col-sm-10">
+                        @Html.EditorFor(model => model.MatKhau, new { htmlAttributes = new { @class = "form-control" } })
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    @Html.LabelFor(model => model.Email, "Email", new { @class = "col-sm-2 col-form-label font-weight-bold" })
+                    <div class="col-sm-10">
+                        @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    @Html.LabelFor(model => model.DiaChi, "Địa chỉ", new { @class = "col-sm-2 col-form-label font-weight-bold" })
+                    <div class="col-sm-10">
+                        @Html.EditorFor(model => model.DiaChi, new { htmlAttributes = new { @class = "form-control" } })
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    @Html.LabelFor(model => model.DienThoai, "Điện thoại", new { @class = "col-sm-2 col-form-label font-weight-bold" })
+                    <div class="col-sm-10">
+                        @Html.EditorFor(model => model.DienThoai, new { htmlAttributes = new { @class = "form-control" } })
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    @Html.LabelFor(model => model.NgaySinh,"Ngày sinh", new { @class = "col-sm-2 col-form-label font-weight-bold" })
+                    <div class="col-sm-10">
+                        @Html.TextBoxFor(model => model.NgaySinh, "{0:yyyy-MM-dd}", new { @class = "form-control", type = "date" })
+                    </div>
+                </div>
+
+                <div class="form-group text-center">
+                    <button type="submit" class="btn btn-success mx-2">Lưu</button>
+                    @Html.ActionLink("Quay lại trang trước", "IndexKH", null, new { @class = "btn btn-secondary mx-2" })
+                </div>
+            }
+        </div>
+    </div>
+</div>
+<style>
+    .product-table-container {
+        padding: 15px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .product-thumbnail {
+        width: 60px;
+        height: 75px;
+    }
+
+    .action-buttons a {
+        display: inline-block;
+        color: #ffffff;
+    }
+
+        .action-buttons a:hover {
+            color: #ffffff;
+        }
+
+    .pagination-container {
+        margin-top: 20px;
+    }
+
+    .navigation {
+        position: fixed;
+        width: 18%;
+        height: 100%;
+        background-color: #2E8B57;
+        color: #FFFACD;
+        transition: 0.5s;
+        left: 0;
+        top: 0;
+    }
+
+    .main {
+        position: relative;
+        width: 113%;
+        left: 6%;
+        min-height: 100vh;
+        background-color: whitesmoke;
+        transition: 0.5s;
+    }
+
+    .sort-link {
+        color: #ffffff;
+        text-decoration: none;
+    }
+
+        .sort-link:hover {
+            color: #ffffff;
+        }
+
+    .sort-icon {
+        color: #ffffff;
+    }
+</style>

@@ -1,0 +1,133 @@
+﻿@{
+    ViewBag.Title = "Thống Kê Doanh Thu";
+    Layout = "~/Views/Shared/Admin.cshtml";
+
+}
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css">
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <div class="card border-primary shadow-lg">
+                <div class="card-header bg-gradient-primary text-white">
+                    <h2 class="card-title" style="text-align: center;">Thống Kê Doanh Thu (@ViewBag.Period)</h2>
+                </div>
+                <div class="card-body bg-light">
+                    <p class="lead font-weight-bold text-success">Tổng doanh thu: <strong>@ViewBag.TotalRevenue.ToString("N0") VND</strong></p>
+                    <form action="@Url.Action("ThongKeDoanhThu", "Admin")" method="get" class="form-inline bg-white p-3 rounded shadow-sm">
+                        <div class="form-group mb-2 mr-2">
+                            <label for="period" class="font-weight-bold mr-2 text-primary">Chọn kỳ thống kê:</label>
+                            <select name="period" id="period" class="form-select form-control">
+                                <option value="day" @(ViewBag.Period == "day" ? "selected" : "")>Hôm nay</option>
+                                <option value="week" @(ViewBag.Period == "week" ? "selected" : "")>Tuần</option>
+                                <option value="month" @(ViewBag.Period == "month" ? "selected" : "")>Tháng</option>
+                                <option value="year" @(ViewBag.Period == "year" ? "selected" : "")>Tổng hợp năm</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary mb-2 ml-2 btn-lg" style="padding:10px"><i class="fas fa-chart-bar"></i> Xem thống kê</button>
+                    </form>
+                    <div id="chartContainer" class="mt-4">
+                        <!-- Biểu đồ sẽ được thêm vào đây -->
+                        <canvas id="chartCanvas" width="400" height="200"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Đảm bảo liên kết tới Bootstrap và Font Awesome để có các biểu tượng và kiểu dáng -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+<!-- Canvas cho biểu đồ -->
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var period = '@ViewBag.Period';
+
+    fetch('@Url.Action("GetRevenueData", "Admin")?period=' + period)
+        .then(response => response.json())
+        .then(result => {
+            var ctx = document.getElementById('chartCanvas').getContext('2d');
+            var myChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: result.labels, // Nhãn của biểu đồ
+                    datasets: [
+                        {
+                            label: 'Doanh thu',
+                            data: result.data,
+                            backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                            borderColor: 'rgba(75, 192, 192, 1)',
+                            borderWidth: 1,
+                            yAxisID: 'y1' // Sử dụng trục y chính (Doanh thu)
+                        },
+                        {
+                            label: 'Số lượng đơn',
+                            data: result.orderCounts,
+                            backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                            borderColor: 'rgba(255, 99, 132, 1)',
+                            borderWidth: 1,
+                            yAxisID: 'y2' // Sử dụng trục y phụ (Số lượng đơn & Booking)
+                        },
+                        {
+                            label: 'Số lượng booking đã xác nhận',
+                            data: result.confirmedBookingCounts,
+                            backgroundColor: 'rgba(255, 206, 86, 0.2)',
+                            borderColor: 'rgba(255, 206, 86, 1)',
+                            borderWidth: 1,
+                            yAxisID: 'y2' // Sử dụng trục y phụ (Số lượng đơn & Booking)
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    scales: {
+                        y1: {
+                            type: 'linear',
+                            position: 'left',
+                            beginAtZero: true,
+                            precision: 0, // Đảm bảo giá trị hiển thị là số nguyên
+                            title: {
+                                display: true,
+                                text: 'Doanh thu (VND)',
+                            },
+                            ticks: {
+                                stepSize: 10000, // Điều chỉnh bước nhảy để phù hợp với dữ liệu doanh thu của bạn
+                            }
+                        },
+                        y2: {
+                            type: 'linear',
+                            position: 'right',
+                            beginAtZero: true,
+                            precision: 0, // Đảm bảo giá trị hiển thị là số nguyên
+                            grid: {
+                                drawOnChartArea: false, // Tránh việc trùng lặp lưới
+                            },
+                            title: {
+                                display: true,
+                                text: 'Số lượng đơn & Booking',
+                            },
+                            ticks: {
+                                stepSize: 1, // Điều chỉnh bước nhảy để phù hợp với dữ liệu đơn hàng và booking
+                            }
+                        }
+                    }
+                }
+            });
+        })
+        .catch(error => {
+            console.error("Có lỗi xảy ra khi lấy dữ liệu doanh thu:", error);
+        });
+});
+</script>
+
+
+
+

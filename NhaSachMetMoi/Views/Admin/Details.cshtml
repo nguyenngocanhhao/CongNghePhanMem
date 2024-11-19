@@ -1,0 +1,78 @@
+﻿@model NhaSachMetMoi.Models.Sach
+
+@{
+    ViewBag.Title = "Chi tiết sách";
+    Layout = "~/Views/Shared/Admin.cshtml";
+    <link href="~/Content/StyleSheet1.css" rel="stylesheet" />
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+ <!-- Thêm Bootstrap -->
+}
+
+<div class="container mt-5">
+    <div class="card shadow-sm p-4">
+        <h1 class="text-center" style="color:#2E8B57">Chi tiết sách</h1>
+        <div class="mt-4">
+            <dl class="row">
+                <dt class="col-sm-3 font-weight-bold">Mã Sách</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.MaSach)</dd>
+
+                <dt class="col-sm-3 font-weight-bold">Tên Sách</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.TenSach)</dd>
+
+                <dt class="col-sm-3 font-weight-bold">Giá</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.Gia) VNĐ</dd>
+
+                <dt class="col-sm-3 font-weight-bold">Mô Tả</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.MoTa)</dd>
+
+                <dt class="col-sm-3 font-weight-bold">Ảnh Bìa</dt>
+                <dd class="col-sm-9">
+                    <img src="@Url.Content("~/Content/images/sach/" + Model.AnhBia)" alt="Ảnh bìa" class="img-thumbnail" style="max-width: 150px;" />
+                </dd>
+
+                <dt class="col-sm-3 font-weight-bold">Năm Xuất Bản</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.NamXB)</dd>
+
+                <dt class="col-sm-3 font-weight-bold">Số Lượng Tồn</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.SoLuongTon)</dd>
+
+                <dt class="col-sm-3 font-weight-bold">Thể Loại</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.TL.TenTL)</dd>
+
+                <dt class="col-sm-3 font-weight-bold">Tác Giả</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.TG.TenTG)</dd>
+
+                <dt class="col-sm-3 font-weight-bold">Nhà Xuất Bản</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.NXB.TenNXB)</dd>
+
+                <dt class="col-sm-3 font-weight-bold">Giảm Giá (Sale)</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.Sale)%</dd>
+            </dl>
+
+            <div class="form-actions mt-4 text-center">
+                <a href="@Url.Action("Edit", new { @MaSach = Model.MaSach })" class="btn btn-warning mr-3">Chỉnh sửa</a>
+                <a href="@Url.Action("IndexAd")" class="btn btn-secondary">Quay lại trang trước</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    /* Các style tùy chỉnh thêm */
+    body {
+        background-color: #f8f9fa;
+    }
+
+    .card {
+        max-width: 800px;
+        margin: auto;
+    }
+
+    h1 {
+        font-weight: bold;
+    }
+
+    .img-thumbnail {
+        margin-top: 10px;
+    }
+</style>

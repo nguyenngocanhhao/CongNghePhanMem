@@ -1,0 +1,211 @@
+﻿@using PagedList;
+@using PagedList.Mvc;
+@model PagedList.PagedList<NhaSachMetMoi.Models.Sach>
+
+@{
+    ViewBag.Title = "IndexAd";
+    Layout = "~/Views/Shared/Admin.cshtml";
+    <link href="~/Content/StyleSheet1.css" rel="stylesheet" />
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+}
+
+<div class="admin-container mt-5">
+    <h1 class="text-center">Quản lí Sản Phẩm</h1>
+    <p class="text-center">
+        @Html.ActionLink("Tạo mới sản phẩm", "Create", null, new { @class = "btn btn-success create-product-btn" })
+    </p>
+
+    <div class="table-responsive product-table-container">
+        <table class="table table-bordered table-hover text-center product-table">
+            <thead class="thead-dark">
+                <tr>
+                    <th><a href="#" class="sort-link" data-sort="MaSP">Mã SP <i class="fa fa-sort sort-icon"></i></a></th>
+                    <th><a href="#" class="sort-link" data-sort="TenSP">Tên SP <i class="fa fa-sort sort-icon"></i></a></th>
+                    <th><a href="#" class="sort-link" data-sort="Gia">Giá <i class="fa fa-sort sort-icon"></i></a></th>
+                    <th>Mô Tả</th>
+                    <th>Ảnh Bìa</th>
+                    <th><a href="#" class="sort-link" data-sort="NamXB">Năm XB/SX <i class="fa fa-sort sort-icon"></i></a></th>
+                    <th><a href="#" class="sort-link" data-sort="SoLuongTon">Số Lượng Tồn <i class="fa fa-sort sort-icon"></i></a></th>
+                    <th>Thể Loại</th>
+                    <th>Tác Giả</th>
+                    <th>NXB/SX</th>
+                    <th><a href="#" class="sort-link" data-sort="Sale">Sale <i class="fa fa-sort sort-icon"></i></a></th>
+                    <th>Thao tác</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@Html.DisplayFor(modelItem => item.MaSach)</td>
+
+                        <td>
+                            @{
+                                string truncatedTitle = item.TenSach.Length > 15 ? item.TenSach.Substring(0, 15) + "..." : item.TenSach;
+                            }
+                            @truncatedTitle
+                        </td>
+
+                        <td>
+                            @String.Format("{0:F2}", item.Gia).TrimEnd('0').TrimEnd('.')
+                        </td>
+
+                        <td>
+                            @{
+                                string truncatedDescription = item.MoTa?.Length > 20 ? item.MoTa.Substring(0, 20) + "..." : item.MoTa;
+                            }
+                            @truncatedDescription
+                        </td>
+
+                        <td>
+                            <img src="@Url.Content("~/Content/images/sach/" + item.AnhBia)" class="img-thumbnail product-thumbnail" />
+                        </td>
+
+                        <td>@Html.DisplayFor(modelItem => item.NamXB)</td>
+
+                        <td>@Html.DisplayFor(modelItem => item.SoLuongTon)</td>
+
+                        <td>
+                            @{
+                                var tenTL = item.TL != null ? item.TL.TenTL : string.Empty;
+                                var truncatedTenTL = tenTL.Length > 10 ? tenTL.Substring(0, 10) : tenTL;
+                            }
+                            @truncatedTenTL<span>...</span>
+                        </td>
+
+                        <td>
+                            @{
+                                var tenTG = item.TG != null ? item.TG.TenTG : string.Empty;
+                                var truncatedTenTG = tenTG.Length > 10 ? tenTG.Substring(0, 10) : tenTG;
+                            }
+                            @truncatedTenTG<span>...</span>
+                        </td>
+
+                        <td>
+                            @{
+                                var tenNXB = item.NXB != null ? item.NXB.TenNXB : string.Empty;
+                                var truncatedTenNXB = tenNXB.Length > 10 ? tenNXB.Substring(0, 10) : tenNXB;
+                            }
+                            @truncatedTenNXB<span>...</span>
+                        </td>
+
+                        <td>@Html.DisplayFor(modelItem => item.Sale)</td>
+
+                        <td>
+                            <div class="d-flex justify-content-center action-buttons">
+                                <a href="@Url.Action("Edit", new { @MaSach = item.MaSach })" class="btn btn-warning btn-sm mx-1" title="Chỉnh sửa">
+                                    <i class="fa fa-edit"></i>
+                                </a>
+                                <a href="@Url.Action("Details", new { @MaSach = item.MaSach })" class="btn btn-info btn-sm mx-1" title="Chi tiết">
+                                    <i class="fa fa-info-circle"></i>
+                                </a>
+                                <a href="@Url.Action("Delete", new { @MaSach = item.MaSach })" class="btn btn-danger btn-sm mx-1" title="Xóa">
+                                    <i class="fa fa-trash"></i>
+                                </a>
+                            </div>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+    <div class="pagination1">
+        @Html.PagedListPager(Model, page => Url.Action("IndexAd", new { page = page }))
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $('.sort-link').on('click', function (e) {
+            e.preventDefault();
+            var sortField = $(this).data('sort');
+            var currentUrl = window.location.href;
+            var newUrl = new URL(currentUrl);
+
+            if (newUrl.searchParams.get('sortOrder') === sortField + "_desc") {
+                newUrl.searchParams.set('sortOrder', sortField + "_asc");
+            } else {
+                newUrl.searchParams.set('sortOrder', sortField + "_desc");
+            }
+
+            window.location.href = newUrl;
+        });
+    });
+</script>
+<script type="text/javascript">
+    function confirmDelete(event) {
+        if (confirm('Bạn có chắc chắn muốn xóa mục này?')) {
+            return true; // Tiếp tục quá trình xóa
+        } else {
+            event.preventDefault(); // Hủy quá trình xóa
+            return false;
+        }
+    }
+</script>
+
+<style>
+    .product-table-container {
+        padding: 15px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .product-thumbnail {
+        width: 60px;
+        height: 75px;
+    }
+
+    .action-buttons a {
+        display: inline-block;
+        color: #ffffff;
+    }
+
+        .action-buttons a:hover {
+            color: #ffffff;
+        }
+
+    .pagination-container {
+        margin-top: 20px;
+    }
+
+    .navigation {
+        position: fixed;
+        width: 18%;
+        height: 100%;
+        background-color: #2E8B57;
+        color: #FFFACD;
+        transition: 0.5s;
+        left: 0;
+        top: 0;
+    }
+
+    .main {
+        position: relative;
+        width: 113%;
+        left: 6%;
+        min-height: 100vh;
+        background-color: whitesmoke;
+        transition: 0.5s;
+    }
+
+    .sort-link {
+        color: #ffffff;
+        text-decoration: none;
+    }
+
+        .sort-link:hover {
+            color: #ffffff;
+        }
+
+    .sort-icon {
+        color: #ffffff;
+    }
+</style>

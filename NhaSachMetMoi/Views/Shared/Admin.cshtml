@@ -1,0 +1,93 @@
+﻿@using NhaSachMetMoi.Models;
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="~/Content/StyleSheet1.css" rel="stylesheet" />
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="navigation">
+                <ul>
+                    <li>
+                        <a>
+                            <div class="title">
+                                <h2>ATHENA</h2>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        @if (Session["TaiKhoan"] != null)
+                        {
+                            var kh = (Admin)Session["TaiKhoan"];
+                            <span style="font-size:20px; color:white">Xin chào, @kh.TaiKhoan</span>
+                            <a href="@Url.Action("Logout", "DangNhap")">Đăng Xuất</a>
+                        }
+                    </li>
+                    <li class="@(Request.RawUrl.Contains("ThongKeDoanhThu") ? "active1" : "")">
+                        <a href="~/Admin/ThongKeDoanhThu">
+                            <span class="icon"><ion-icon name="stats-chart"></ion-icon></span>
+                            <span class="title">Thống kê</span>
+                        </a>
+                    </li>
+                    <li class="@(Request.RawUrl.Contains("IndexAd") ? "active1" : "")">
+                        <a href="~/Admin/IndexAd">
+                            <span class="icon"><ion-icon name="business-outline"></ion-icon></span>
+                            <span class="title">Quản lí Sản Phẩm</span>
+                        </a>
+                    </li>
+                    <li class="@(Request.RawUrl.Contains("IndexDH") ? "active1" : "")">
+                        <a href="~/Admin/IndexDH">
+                            <span class="icon"><ion-icon name="file-tray-full-outline"></ion-icon></span>
+                            <span class="title">Đơn hàng</span>
+                        </a>
+                    </li>
+                    <li class="@(Request.RawUrl.Contains("IndexKH") ? "active1" : "")">
+                        <a href="~/Admin/IndexKH">
+                            <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
+                            <span class="title">Khách hàng</span>
+                        </a>
+                    </li>
+                    <li class="@(Request.RawUrl.Contains("IndexB") ? "active1" : "")">
+                        <a href="~/Admin/IndexB">
+                            <span class="icon"><ion-icon name="briefcase-outline"></ion-icon></span>
+                            <span class="title">Quản lí phòng</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="main">
+                <div>
+                    @RenderBody()
+                </div>
+            </div>
+        </div>
+    </header>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
+
+<style>
+    .active1 {
+        background-color: #FFFacd; /* Màu nền nổi bật */
+        color: #2e8b57; /* Màu chữ nổi bật */
+    }
+
+    .navigation ul li a {
+        text-decoration: none;
+        color: inherit; /* Kế thừa màu từ thẻ cha */
+    }
+
+    .navigation ul li.active a {
+        color: #2e8b57; /* Màu chữ khi đang được chọn */
+    }
+
+</style>

@@ -1,0 +1,271 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="NhaSachModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Admin">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="TaiKhoan" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
+    <Property Name="MatKhau" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="BookingInfo">
+    <Key>
+      <PropertyRef Name="BookingID" />
+    </Key>
+    <Property Name="BookingID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MaKH" Type="Int32" />
+    <Property Name="RoomPackage" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Duration" Type="Int32" Nullable="false" />
+    <Property Name="NumberOfParticipants" Type="Int32" Nullable="false" />
+    <Property Name="BookingDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="BookingTime" Type="Time" Nullable="false" Precision="7" />
+    <Property Name="Note" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="KH" Relationship="Self.FK__BookingInf__MaKH__5FB337D6" FromRole="BookingInfo" ToRole="KHs" />
+    <Property Name="PhoneNumber" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="FullName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="TotalPrice" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="ConfirmationStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ChiTietDH">
+    <Key>
+      <PropertyRef Name="MaDH" />
+      <PropertyRef Name="MaSach" />
+    </Key>
+    <Property Name="MaDH" Type="Int32" Nullable="false" />
+    <Property Name="MaSach" Type="Int32" Nullable="false" />
+    <Property Name="SoLuong" Type="Int32" />
+    <Property Name="Gia" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="TenSach" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="AnhBia" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="GiaBan" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Sale" Type="Int32" />
+    <NavigationProperty Name="DonHang" Relationship="Self.FK_ChiTietDH_DonHang" FromRole="ChiTietDHs" ToRole="DonHangs" />
+    <NavigationProperty Name="Sach" Relationship="Self.FK_ChiTietDH_Sach1" FromRole="ChiTietDHs" ToRole="Saches" />
+  </EntityType>
+  <EntityType Name="DonHang">
+    <Key>
+      <PropertyRef Name="MaDH" />
+    </Key>
+    <Property Name="MaDH" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NgayDat" Type="DateTime" Precision="3" />
+    <Property Name="NgayGiao" Type="DateTime" Precision="3" />
+    <Property Name="MaKH" Type="Int32" />
+    <Property Name="TongTien" Type="Int32" Nullable="false" />
+    <Property Name="MaGiamGia" Type="Int32" />
+    <NavigationProperty Name="ChiTietDHs" Relationship="Self.FK_ChiTietDH_DonHang" FromRole="DonHangs" ToRole="ChiTietDHs" />
+    <NavigationProperty Name="KH" Relationship="Self.FK_DonHang_KH" FromRole="DonHangs" ToRole="KHs" />
+    <Property Name="TrangThai" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MaGiamGiaId" Type="Int32" />
+    <NavigationProperty Name="MaGiamGia1" Relationship="NhaSachModel.FK_DonHangs_MaGiamGias" FromRole="DonHang" ToRole="MaGiamGia" />
+  </EntityType>
+  <EntityType Name="KH">
+    <Key>
+      <PropertyRef Name="MaKH" />
+    </Key>
+    <Property Name="MaKH" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="HoTen" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TaiKhoan" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MatKhau" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="DiaChi" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="DienThoai" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+    <Property Name="NgaySinh" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="BookingInfoes" Relationship="Self.FK__BookingInf__MaKH__5FB337D6" FromRole="KHs" ToRole="BookingInfo" />
+    <NavigationProperty Name="DonHangs" Relationship="Self.FK_DonHang_KH" FromRole="KHs" ToRole="DonHangs" />
+  </EntityType>
+  <EntityType Name="MaGiamGia">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ma" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="giam" Type="Decimal" Precision="5" Scale="2" />
+    <NavigationProperty Name="DonHangs" Relationship="NhaSachModel.FK_DonHangs_MaGiamGias" FromRole="MaGiamGia" ToRole="DonHang" />
+  </EntityType>
+  <EntityType Name="NXB">
+    <Key>
+      <PropertyRef Name="MaNXB" />
+    </Key>
+    <Property Name="MaNXB" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TenNXB" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Saches" Relationship="Self.FK_Sach_NXB1" FromRole="NXBs" ToRole="Saches" />
+  </EntityType>
+  <EntityType Name="Sach">
+    <Key>
+      <PropertyRef Name="MaSach" />
+    </Key>
+    <Property Name="MaSach" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TenSach" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Gia" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="KichThuoc" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="MoTa" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="AnhBia" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NamXB" Type="Int32" />
+    <Property Name="SoLuongTon" Type="Int32" />
+    <Property Name="MaTL" Type="Int32" />
+    <Property Name="MaTG" Type="Int32" />
+    <Property Name="MaNXB" Type="Int32" />
+    <Property Name="Sale" Type="Int32" />
+    <NavigationProperty Name="ChiTietDHs" Relationship="Self.FK_ChiTietDH_Sach1" FromRole="Saches" ToRole="ChiTietDHs" />
+    <NavigationProperty Name="NXB" Relationship="Self.FK_Sach_NXB1" FromRole="Saches" ToRole="NXBs" />
+    <NavigationProperty Name="TG" Relationship="Self.FK_Sach_TG1" FromRole="Saches" ToRole="TGs" />
+    <NavigationProperty Name="TL" Relationship="Self.FK_Sach_TL1" FromRole="Saches" ToRole="TLs" />
+  </EntityType>
+  <EntityType Name="TG">
+    <Key>
+      <PropertyRef Name="MaTG" />
+    </Key>
+    <Property Name="MaTG" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TenTG" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Saches" Relationship="Self.FK_Sach_TG1" FromRole="TGs" ToRole="Saches" />
+  </EntityType>
+  <EntityType Name="TL">
+    <Key>
+      <PropertyRef Name="MaTL" />
+    </Key>
+    <Property Name="MaTL" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TenTL" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Saches" Relationship="Self.FK_Sach_TL1" FromRole="TLs" ToRole="Saches" />
+  </EntityType>
+  <Association Name="FK__BookingInf__MaKH__5FB337D6">
+    <End Role="KHs" Type="Self.KH" Multiplicity="0..1" />
+    <End Role="BookingInfo" Type="Self.BookingInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KHs">
+        <PropertyRef Name="MaKH" />
+      </Principal>
+      <Dependent Role="BookingInfo">
+        <PropertyRef Name="MaKH" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ChiTietDH_DonHang">
+    <End Role="DonHangs" Type="Self.DonHang" Multiplicity="1" />
+    <End Role="ChiTietDHs" Type="Self.ChiTietDH" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DonHangs">
+        <PropertyRef Name="MaDH" />
+      </Principal>
+      <Dependent Role="ChiTietDHs">
+        <PropertyRef Name="MaDH" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ChiTietDH_Sach1">
+    <End Role="Saches" Type="Self.Sach" Multiplicity="1" />
+    <End Role="ChiTietDHs" Type="Self.ChiTietDH" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Saches">
+        <PropertyRef Name="MaSach" />
+      </Principal>
+      <Dependent Role="ChiTietDHs">
+        <PropertyRef Name="MaSach" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DonHang_KH">
+    <End Role="KHs" Type="Self.KH" Multiplicity="0..1" />
+    <End Role="DonHangs" Type="Self.DonHang" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KHs">
+        <PropertyRef Name="MaKH" />
+      </Principal>
+      <Dependent Role="DonHangs">
+        <PropertyRef Name="MaKH" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Sach_NXB1">
+    <End Role="NXBs" Type="Self.NXB" Multiplicity="0..1" />
+    <End Role="Saches" Type="Self.Sach" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NXBs">
+        <PropertyRef Name="MaNXB" />
+      </Principal>
+      <Dependent Role="Saches">
+        <PropertyRef Name="MaNXB" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Sach_TG1">
+    <End Role="TGs" Type="Self.TG" Multiplicity="0..1" />
+    <End Role="Saches" Type="Self.Sach" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TGs">
+        <PropertyRef Name="MaTG" />
+      </Principal>
+      <Dependent Role="Saches">
+        <PropertyRef Name="MaTG" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Sach_TL1">
+    <End Role="TLs" Type="Self.TL" Multiplicity="0..1" />
+    <End Role="Saches" Type="Self.Sach" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TLs">
+        <PropertyRef Name="MaTL" />
+      </Principal>
+      <Dependent Role="Saches">
+        <PropertyRef Name="MaTL" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="NhaSachEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Admins" EntityType="Self.Admin" />
+    <EntitySet Name="BookingInfoes" EntityType="Self.BookingInfo" />
+    <EntitySet Name="ChiTietDHs" EntityType="Self.ChiTietDH" />
+    <EntitySet Name="DonHangs" EntityType="Self.DonHang" />
+    <EntitySet Name="KHs" EntityType="Self.KH" />
+    <EntitySet Name="MaGiamGias" EntityType="Self.MaGiamGia" />
+    <EntitySet Name="NXBs" EntityType="Self.NXB" />
+    <EntitySet Name="Saches" EntityType="Self.Sach" />
+    <EntitySet Name="TGs" EntityType="Self.TG" />
+    <EntitySet Name="TLs" EntityType="Self.TL" />
+    <AssociationSet Name="FK__BookingInf__MaKH__5FB337D6" Association="Self.FK__BookingInf__MaKH__5FB337D6">
+      <End Role="KHs" EntitySet="KHs" />
+      <End Role="BookingInfo" EntitySet="BookingInfoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ChiTietDH_DonHang" Association="Self.FK_ChiTietDH_DonHang">
+      <End Role="DonHangs" EntitySet="DonHangs" />
+      <End Role="ChiTietDHs" EntitySet="ChiTietDHs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ChiTietDH_Sach1" Association="Self.FK_ChiTietDH_Sach1">
+      <End Role="Saches" EntitySet="Saches" />
+      <End Role="ChiTietDHs" EntitySet="ChiTietDHs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DonHang_KH" Association="Self.FK_DonHang_KH">
+      <End Role="KHs" EntitySet="KHs" />
+      <End Role="DonHangs" EntitySet="DonHangs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Sach_NXB1" Association="Self.FK_Sach_NXB1">
+      <End Role="NXBs" EntitySet="NXBs" />
+      <End Role="Saches" EntitySet="Saches" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Sach_TG1" Association="Self.FK_Sach_TG1">
+      <End Role="TGs" EntitySet="TGs" />
+      <End Role="Saches" EntitySet="Saches" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Sach_TL1" Association="Self.FK_Sach_TL1">
+      <End Role="TLs" EntitySet="TLs" />
+      <End Role="Saches" EntitySet="Saches" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DonHangs_MaGiamGias" Association="NhaSachModel.FK_DonHangs_MaGiamGias">
+      <End Role="MaGiamGia" EntitySet="MaGiamGias" />
+      <End Role="DonHang" EntitySet="DonHangs" />
+    </AssociationSet>
+  </EntityContainer>
+  <Association Name="FK_DonHangs_MaGiamGias">
+    <End Type="NhaSachModel.MaGiamGia" Role="MaGiamGia" Multiplicity="0..1" />
+    <End Type="NhaSachModel.DonHang" Role="DonHang" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MaGiamGia">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="DonHang">
+        <PropertyRef Name="MaGiamGiaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

@@ -1,0 +1,72 @@
+﻿@using NhaSachMetMoi.Models;
+
+@{
+    ViewBag.Title = "Layoutpage";
+    var danhMucs = ViewBag.DanhMucs as List<NhaSachMetMoi.Models.TL>;
+
+}
+<header class="header">
+    <nav>
+        <div class="logo">
+            <a href="@Url.Action("Index", "TrangChu")">
+                <img src="~/Content/images/logo1.png" alt="Logo" />
+                <span style="display: inline-block; vertical-align: middle; font-size: 40px; color: #FFFACD;font-weight:bolder">ATHENA</span>
+
+            </a>
+
+        </div>
+        <div class="toggle">
+            <a href="#"><ion-icon name="list-outline"></ion-icon></a>
+        </div>
+        <ul class="menu">
+            <li style="font-size: 15px"><a href="~/Trangchu/Index">TRANG CHỦ</a></li>
+            <li style="font-size: 15px" class="dropdown">
+                <ul onclick="myFunction()" class="dropbtn">DANH MỤC</ul>
+                <div id="myDropdown" class="dropdown-content">
+                    @if (danhMucs != null)
+                    {
+                        foreach (var danhmuc in danhMucs)
+                        {
+
+                            <a href="@Url.Action("SachTL","TrangChu", new { @matl = danhmuc.MaTL })">@danhmuc.TenTL</a>}
+                    }
+                </div>
+            </li>
+            <li style="font-size: 30px">
+                <a href="@Url.Action("GioHang","GioHang")"><ion-icon name="cart-outline"></ion-icon></a>
+                <div id="rad-cart">@Html.Action("GioHangPartial", "GioHang")</div>
+            </li>
+            <li id="myOverlay" class="overlay">
+                <span class="closebtn" onclick="closeSearch()" title="Close Overlay">×</span>
+                <div class="overlay-content">
+                    @using (Html.BeginForm("Ketquatimkiem", "Tim", FormMethod.Post))
+                    {
+                        <form>
+                            @Html.TextBox("txtTim", "", htmlAttributes: new { @class = "TextBoxTimKiem", @placehoder = "Nhập từ khóa" })
+                            <button type="submit"><i class="fa fa-search"></i></button>
+                        </form>
+                    }
+                </div>
+            </li>
+            <li style="font-size: 30px" class="openBtn" onclick="openSearch()"><ion-icon name="search-outline"></ion-icon></li>
+            <li style="font-size: 30px;">
+                @if (Session["TaiKhoan"] != null)
+                {
+                    var kh = (NhaSachMetMoi.Models.KH)Session["TaiKhoan"];
+                    <a href="@Url.Action("ThongTinCaNhan", "KhachHang", new { id = kh.MaKH })" style="font-size: 18px; color:#FFFACD">
+                        Xin chào, @kh.TaiKhoan
+                    </a>
+                    <sub>
+                        <a href="@Url.Action("Logout", "DangNhap")" style="font-size:12px"> Đăng Xuất</a>
+                    </sub>
+                }
+                else
+                {
+                    <a href="@Url.Action("IndexTK", "DangNhap")">
+                        <ion-icon name="person-circle-outline"></ion-icon>
+                    </a>
+                }
+            </li>
+        </ul>
+    </nav>
+</header>

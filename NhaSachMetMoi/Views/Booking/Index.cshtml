@@ -1,0 +1,148 @@
+﻿
+@model NhaSachMetMoi.Models.BookingInfo
+
+@{
+    ViewBag.Title = "IndexBooking";
+    Layout = "~/Views/Shared/Layoutpage.cshtml";
+    var today = DateTime.Now.ToString("yyyy-MM-dd");
+    <script src="~/Content/homepage.js"></script>
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking</title>
+    <link rel="stylesheet" href="~/Content/booking.css">
+</head>
+<body>
+    <section style="display: flex; justify-content: center; background: #fffbf0">
+        <img src="~/Content/images/athenaa.jpg" alt="ATHENA" id="thumbnail" style="width: 100%; height: auto; object-fit: cover; max-width: 1000px; cursor: pointer;" onclick="openModal()" />
+    </section>
+    <br />
+    <div class="booking-container">
+        @using (Html.BeginForm("Index", "Booking", FormMethod.Post))
+        {
+            @Html.AntiForgeryToken()
+
+            @Html.ValidationSummary(true, "Vui lòng sửa các lỗi sau đây:")
+
+            if (Session["TaiKhoan"] == null)
+            {
+                <div class="card">
+                    <div class="card-header">
+                        <h2 class="haha">Thông tin liên lạc</h2>
+                    </div>
+                    <div class="card-body">
+                        <label>Số điện thoại:</label>
+                        @Html.TextBoxFor(model => model.PhoneNumber, new { @value = ViewBag.PhoneNumber })
+                        @Html.ValidationMessageFor(model => model.PhoneNumber)
+
+                        <label>Họ và tên:</label>
+                        @Html.TextBoxFor(model => model.FullName, new { @value = ViewBag.FullName })
+                        @Html.ValidationMessageFor(model => model.FullName)
+
+                        <label>Email:</label>
+                        @Html.TextBoxFor(model => model.Email, new { @value = ViewBag.Email })
+                        @Html.ValidationMessageFor(model => model.Email)
+                    </div>
+                </div>
+            }
+
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="haha">Thông tin đặt chỗ</h2>
+                </div>
+                <div class="card-body">
+                    <label>Chọn gói phòng họp:</label>
+                    @Html.DropDownListFor(model => model.RoomPackage,
+                        new SelectList(new[] { "Meeting Room", "Private Zone", "Couple Room" }, "Private Zone"),
+                        new { id = "RoomPackage" })
+                    @Html.ValidationMessageFor(model => model.RoomPackage)
+
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label>Bạn muốn sử dụng trong bao lâu?</label>
+                            @Html.DropDownListFor(model => model.Duration, new List<SelectListItem>
+                            {
+                                new SelectListItem { Value = "2", Text = "2 giờ" },
+                                new SelectListItem { Value = "3", Text = "3 giờ" },
+                                new SelectListItem { Value = "4", Text = "4 giờ" },
+                            }, "Chọn thời lượng", new { id = "Duration" })
+                            @Html.ValidationMessageFor(model => model.Duration)
+                        </div>
+
+                        <!-- Other fields like NumberOfParticipants, BookingDate, BookingTime -->
+                        <div class="form-group">
+                            <label>Số người tham gia:</label>
+                            @Html.DropDownListFor(model => model.NumberOfParticipants,
+                                new SelectList(Enumerable.Range(1, 10).Select(i => new { Value = i, Text = i.ToString() }), "Value", "Text", 1),
+                                new { id = "NumberOfParticipants" })
+                            @Html.ValidationMessageFor(model => model.NumberOfParticipants)
+                        </div>
+
+
+                        <div class="form-group">
+                            <label>Ngày đến:</label>
+                            @Html.TextBoxFor(model => model.BookingDate, new { @type = "date", @min = DateTime.Now.ToString("yyyy-MM-dd") })
+                            @Html.ValidationMessageFor(model => model.BookingDate)
+                        </div>
+
+                        <div class="form-group">
+                            <label>Giờ đến:</label>
+                            @Html.DropDownListFor(model => model.BookingTime, new SelectList(new[]
+                            {
+                                "09:00", "09:30", "10:00", "10:30", "11:00", "11:30", "12:00", "12:30",
+                                "13:00", "13:30", "14:00", "14:30", "15:00", "15:30", "16:00", "16:30",
+                                "17:00", "17:30", "18:00", "18:30", "19:00", "19:30", "20:00", "20:30",
+                                "21:00", "21:30", "22:00", "22:30", "23:00"
+                            }), "Chọn giờ đến")
+                            @Html.ValidationMessageFor(model => model.BookingTime)
+                        </div>
+
+
+                        <div class="form-group">
+                            <label>Giá tiền:</label>
+                            <div id="totalPrice">0 VNĐ</div>
+                        </div>
+
+                    </div>
+
+                    <label>Lời nhắn:</label>
+                    @Html.TextAreaFor(model => model.Note)
+                    @Html.ValidationMessageFor(model => model.Note)
+                </div>
+            </div>
+            <button type="submit">Xác nhận đặt chỗ</button>
+        }
+    </div>
+
+    <script>
+        const prices = {
+            "Meeting Room": { 2: 170000, 3: 220000, 4: 220000 },
+            "Private Zone": { 2: 35000, 3: 50000, 4: 60000 },
+            "Couple Room": { 2: 45000, 3: 65000, 4: 80000 }
+        };
+
+        function calculatePrice() {
+            const roomType = document.getElementById("RoomPackage").value;
+            const duration = document.getElementById("Duration").value;
+
+            let totalPrice = 0;
+
+            if (roomType in prices && duration in prices[roomType]) {
+                totalPrice = prices[roomType][duration];
+            }
+
+            document.getElementById("totalPrice").innerText = totalPrice.toLocaleString("vi-VN") + " VNĐ";
+        }
+
+        document.getElementById("RoomPackage").addEventListener("change", calculatePrice);
+        document.getElementById("Duration").addEventListener("change", calculatePrice);
+    </script>
+
+</body>
+</html>
+
+            }

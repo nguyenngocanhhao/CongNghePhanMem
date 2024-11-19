@@ -1,0 +1,210 @@
+﻿@model NhaSachMetMoi.Models.Sach
+
+@{
+    ViewBag.Title = "Chỉnh sửa sản phẩm";
+    Layout = "~/Views/Shared/Admin.cshtml";
+    <link href="~/Content/StyleSheet1.css" rel="stylesheet" />
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+ <!-- Thêm Bootstrap -->
+}
+
+<div class="container mt-5">
+    <div class="card shadow-sm p-4">
+        <h1 class="text-center"  style="color:#2E8B57">Chỉnh sửa sản phẩm</h1>
+
+        @using (Html.BeginForm("Edit", "Admin", FormMethod.Post, new { @enctype = "multipart/form-data" }))
+        {
+            @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+
+        <div class="form-group row">
+            @Html.LabelFor(model => model.MaSach,"Mã Sách" , new { @class = "col-sm-3 col-form-label font-weight-bold" })
+            <div class="col-sm-9">
+                <span class="form-control-plaintext">@Model.MaSach</span>
+                @Html.Hidden("MaSach", Model.MaSach)
+            </div>
+        </div>
+
+        <div class="form-group row">
+            @Html.LabelFor(model => model.TenSach, "Tên Sách", new { @class = "col-sm-3 col-form-label font-weight-bold" })
+
+            <div class="col-sm-9">
+                @Html.EditorFor(model => model.TenSach, new { htmlAttributes = new { @class = "form-control" } })
+            </div>
+        </div>
+
+        <div class="form-group row">
+            @Html.LabelFor(model => model.Gia, "Giá tiền", new { @class = "col-sm-3 col-form-label font-weight-bold" })
+            <div class="col-sm-9">
+                @Html.EditorFor(model => model.Gia, new { htmlAttributes = new { @class = "form-control" } })
+            </div>
+        </div>
+
+        <div class="form-group row">
+            @Html.LabelFor(model => model.AnhBia, "Ảnh bìa", new { @class = "col-sm-3 col-form-label font-weight-bold" })
+            <div class="col-sm-9">
+                <img id="previewImage" src="@Url.Content("~/Content/images/sach/" + Model.AnhBia)" alt="Ảnh bìa" class="img-thumbnail" style="max-width: 150px;" />
+                <input type="file" name="fileupload" class="form-control-file mt-2" onchange="previewFile()" />
+            </div>
+        </div>
+
+        <div class="form-group row">
+            @Html.LabelFor(model => model.NamXB, "Năm xuất bản", new { @class = "col-sm-3 col-form-label font-weight-bold" })
+            <div class="col-sm-9">
+                @Html.EditorFor(model => model.NamXB, new { htmlAttributes = new { @class = "form-control" } })
+            </div>
+        </div>
+
+        <div class="form-group row">
+            @Html.LabelFor(model => model.SoLuongTon, "Số lượng tồn", new { @class = "col-sm-3 col-form-label font-weight-bold" })
+            <div class="col-sm-9">
+                @Html.EditorFor(model => model.SoLuongTon, new { htmlAttributes = new { @class = "form-control" } })
+            </div>
+        </div>
+
+        <div class="form-group row">
+            @Html.LabelFor(model => model.MaTL, "Thể loại", new { @class = "col-sm-3 col-form-label font-weight-bold" })
+            <div class="col-sm-9">
+                @Html.DropDownListFor(model => model.MaTL, new SelectList(ViewBag.MaTL as System.Collections.IEnumerable, "Value", "Text"), "Chọn thể loại", new { @class = "form-control" })
+            </div>
+        </div>
+
+        <div class="form-group row">
+            @Html.LabelFor(model => model.MaTG, "Tác giả", new { @class = "col-sm-3 col-form-label font-weight-bold" })
+            <div class="col-sm-9">
+                @Html.DropDownListFor(model => model.MaTG, new SelectList(ViewBag.MaTG as System.Collections.IEnumerable, "Value", "Text"), "Chọn tác giả", new { @class = "form-control" })
+            </div>
+        </div>
+
+        <div class="form-group row">
+            @Html.LabelFor(model => model.MaNXB, "Nhà xuất bản", new { @class = "col-sm-3 col-form-label font-weight-bold" })
+            <div class="col-sm-9">
+                @Html.DropDownListFor(model => model.MaNXB, new SelectList(ViewBag.MaNXB as System.Collections.IEnumerable, "Value", "Text"), "Chọn nhà xuất bản", new { @class = "form-control" })
+            </div>
+        </div>
+
+
+        <div class="form-group row">
+            @Html.LabelFor(model => model.Sale, "Sale", new { @class = "col-sm-3 col-form-label font-weight-bold" })
+            <div class="col-sm-9">
+                @Html.EditorFor(model => model.Sale, new { htmlAttributes = new { @class = "form-control" } })
+            </div>
+        </div>
+
+        <div class="form-group row">
+            @Html.LabelFor(model => model.MoTa, "Mô tả", new { @class = "col-sm-3 col-form-label font-weight-bold" })
+            <div class="col-sm-9">
+                @Html.TextAreaFor(model => model.MoTa, new { @class = "form-control", @rows = 5 })
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-sm-9 offset-sm-3">
+                <input type="submit" value="Lưu" class="btn btn-primary" />
+                <a href="@Url.Action("IndexAd")" class="btn btn-secondary ml-2">Quay lại trang trước</a>
+            </div>
+        </div>
+    </div>
+        }
+    </div>
+</div>
+
+<script type="text/javascript">
+    function previewFile() {
+        const preview = document.getElementById('previewImage');
+        const file = document.querySelector('input[type=file]').files[0];
+        const reader = new FileReader();
+
+        reader.addEventListener("load", function () {
+            preview.src = reader.result;
+        }, false);
+
+        if (file) {
+            reader.readAsDataURL(file);
+        }
+    }
+</script>
+
+<style>
+    /* Các style tùy chỉnh thêm */
+    body {
+        background-color: #f8f9fa;
+    }
+
+    .card {
+        max-width: 800px;
+        margin: auto;
+    }
+
+    h1 {
+        font-weight: bold;
+    }
+
+    .img-thumbnail {
+        margin-top: 10px;
+    }
+
+    .form-group {
+        margin-bottom: 1.5rem;
+    }
+</style>
+<style>
+    .product-table-container {
+        padding: 15px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .product-thumbnail {
+        width: 60px;
+        height: 75px;
+    }
+
+    .action-buttons a {
+        display: inline-block;
+        color: #ffffff;
+    }
+
+        .action-buttons a:hover {
+            color: #ffffff;
+        }
+
+    .pagination-container {
+        margin-top: 20px;
+    }
+
+    .navigation {
+        position: fixed;
+        width: 18%;
+        height: 100%;
+        background-color: #2E8B57;
+        color: #FFFACD;
+        transition: 0.5s;
+        left: 0;
+        top: 0;
+    }
+
+    .main {
+        position: relative;
+        width: 113%;
+        left: 6%;
+        min-height: 100vh;
+        background-color: whitesmoke;
+        transition: 0.5s;
+    }
+
+    .sort-link {
+        color: #ffffff;
+        text-decoration: none;
+    }
+
+        .sort-link:hover {
+            color: #ffffff;
+        }
+
+    .sort-icon {
+        color: #ffffff;
+    }
+</style>

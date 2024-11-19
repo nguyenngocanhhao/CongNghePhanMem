@@ -1,0 +1,150 @@
+﻿@model NhaSachMetMoi.Models.KH
+
+@{
+    ViewBag.Title = "DeleteKH";
+    Layout = "~/Views/Shared/Admin.cshtml";
+}
+
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+<link href="~/Content/StyleSheet1.css" rel="stylesheet" />
+
+<div class="container mt-5">
+    <div class="card border-danger">
+        <div class="card-header bg-danger text-white">
+            <h3 class="mb-0 text-center h33" >Xóa Tài Khoản Khách Hàng</h3>
+        </div>
+        <div class="card-body">
+            <p class="text-danger font-weight-bold">Bạn có chắc chắn muốn xóa tài khoản khách hàng này?</p>
+            <dl class="row">
+                <dt class="col-sm-4">
+                   Mã khách hàng: 
+                </dt>
+                <dd class="col-sm-8">
+                    @Html.DisplayFor(model => model.MaKH)
+                </dd>
+
+                <dt class="col-sm-4">
+                   Họ tên: 
+                </dt>
+                <dd class="col-sm-8">
+                    @Html.DisplayFor(model => model.HoTen)
+                </dd>
+
+                <dt class="col-sm-4">
+                    Tài khoản:
+                </dt>
+                <dd class="col-sm-8">
+                    @Html.DisplayFor(model => model.TaiKhoan)
+                </dd>
+
+                <dt class="col-sm-4">
+                  Mật khẩu:
+                </dt>
+                <dd class="col-sm-8">
+                    @Html.DisplayFor(model => model.MatKhau)
+                </dd>
+
+                <dt class="col-sm-4">
+                   Email:
+                </dt>
+                <dd class="col-sm-8">
+                    @Html.DisplayFor(model => model.Email)
+                </dd>
+
+                <dt class="col-sm-4">
+                  Địa chỉ:
+                </dt>
+                <dd class="col-sm-8">
+                    @Html.DisplayFor(model => model.DiaChi)
+                </dd>
+
+                <dt class="col-sm-4">
+                  Điện thoại:
+                </dt>
+                <dd class="col-sm-8">
+                    @Html.DisplayFor(model => model.DienThoai)
+                </dd>
+
+                <dt class="col-sm-4">
+                    Ngày sinh:
+                </dt>
+                <dd class="col-sm-8">
+                    @Html.DisplayFor(model => model.NgaySinh)
+                </dd>
+            </dl>
+        </div>
+        <div class="card-footer text-center">
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-danger">Xóa</button>
+                    @Html.ActionLink("Quay lại trang trước", "IndexKH", null, new { @class = "btn btn-secondary ml-2" })
+                </div>
+            }
+        </div>
+    </div>
+</div>
+<style>
+    .product-table-container {
+        padding: 15px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .product-thumbnail {
+        width: 60px;
+        height: 75px;
+    }
+
+    .action-buttons a {
+        display: inline-block;
+        color: #ffffff;
+    }
+
+        .action-buttons a:hover {
+            color: #ffffff;
+        }
+
+    .pagination-container {
+        margin-top: 20px;
+    }
+
+    .navigation {
+        position: fixed;
+        width: 18%;
+        height: 100%;
+        background-color: #2E8B57;
+        color: #FFFACD;
+        transition: 0.5s;
+        left: 0;
+        top: 0;
+    }
+
+    .main {
+        position: relative;
+        width: 113%;
+        left: 6%;
+        min-height: 100vh;
+        background-color: whitesmoke;
+        transition: 0.5s;
+    }
+    .h33 {
+        color:#ffffff;
+    }
+
+    .sort-link {
+        color: #ffffff;
+        text-decoration: none;
+    }
+
+        .sort-link:hover {
+            color: #ffffff;
+        }
+
+    .sort-icon {
+        color: #ffffff;
+    }
+</style>

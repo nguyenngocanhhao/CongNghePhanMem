@@ -1,0 +1,109 @@
+﻿body {
+    font-family: 'montserrat', sans-serif;
+    background-color: #f9f9f9;
+}
+@font-face {
+    font-family: 'montserrat';
+    src: url('fonts/montserrat.ttf') format('truetype');
+}
+.booking-container {
+    width: 80%;
+    max-width: 600px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.haha {
+    font-family: 'Butler_bold';
+    font-size: 2.75rem;
+    color: #FFFACD;
+}
+.card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 8px 8px 12px rgba(0, 0, 0, .26);
+    border-radius: 5px;
+    border: 2px solid #2E8B57
+}
+.card-body {
+    padding: 20px;
+}
+.card-header {
+    background-color: #2E8B57; /* Màu nền xanh lá cây như trong hình 1 */
+    color: #FFFFFF; /* Màu chữ trắng */
+    font-size: 16px; /* Kích thước font chữ */
+    padding: 16px; /* Khoảng cách bên trong */
+     
+    
+}
+
+
+    .section h2 {
+        background-color: black;
+        color: white;
+        padding: 10px;
+        border-radius: 5px;
+        font-size: 18px;
+        text-align: center;
+    }
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+label {
+    font-size:14.4px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="time"],
+select,
+textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: #fff5eb;
+    background-color: rgb(239 239 239);
+    border-color: rgb(0 0 0 / 48%)
+}
+
+textarea {
+    resize: vertical;
+    height: 60px;
+}
+
+button {
+    background-color: #2E8B57;
+    color: #FFFACD;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+    button:hover {
+        background-color: #218838;
+    }
+
+
+.form-grid {
+    padding-top:1.3rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Chia làm 2 cột */
+    gap: 16px; /* Khoảng cách giữa các ô */
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
