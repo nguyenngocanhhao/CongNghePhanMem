@@ -4,5 +4,5 @@ services:
     env: dotnet
     branch: master
     buildCommand: "msbuild NhaSachMetMoi.sln /p:Configuration=Release"
-    startCommand: "NhaSachMetMoi/NhaSachMetMoi.exe"
+    startCommand: "dotnet NhaSachMetMoi/bin/Release/NhaSachMetMoi.dll"
     plan: free
