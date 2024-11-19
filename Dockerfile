@@ -1,5 +1,7 @@
-# Use the official .NET SDK image to build the app
-FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
+# Use the official .NET Framework SDK image to build the app (Windows base image)
+FROM mcr.microsoft.com/dotnet/framework/sdk:4.8-windowsservercore-ltsc2019 AS build
+
+# Set working directory
 WORKDIR /src
 
 # Copy the solution and projects files
@@ -7,21 +9,26 @@ COPY ["NhaSachMetMoi.sln", "./"]
 COPY ["NhaSachMetMoi/NhaSachMetMoi.csproj", "NhaSachMetMoi/"]
 
 # Restore dependencies
-RUN dotnet restore "NhaSachMetMoi/NhaSachMetMoi.csproj"
+RUN nuget restore "NhaSachMetMoi.sln"
 
 # Copy the rest of the application code
 COPY . .
 
-# Build the application
+# Build the application using MSBuild
 WORKDIR "/src/NhaSachMetMoi"
-RUN dotnet build -c Release -o /app/build
+RUN msbuild "NhaSachMetMoi.csproj" /p:Configuration=Release /p:Platform="Any CPU"
 
-# Publish the application
-FROM build AS publish
-RUN dotnet publish -c Release -o /app/publish
+# Use IIS base image to host ASP.NET MVC
+FROM mcr.microsoft.com/windows/servercore/iis:windowsservercore-ltsc2019 AS runtime
 
-# Use the ASP.NET runtime to serve the application
-FROM mcr.microsoft.com/dotnet/aspnet:6.0 AS final
-WORKDIR /app
-COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "NhaSachMetMoi.dll"]
+# Install ASP.NET 4.8 (for ASP.NET MVC support)
+RUN dism /online /enable-feature /featurename:IIS-ASPNET45 /all
+
+# Set working directory
+WORKDIR /inetpub/wwwroot
+
+# Copy the build output to IIS directory
+COPY --from=build /src/NhaSachMetMoi/. ./
+
+# Expose port 80
+EXPOSE 80
