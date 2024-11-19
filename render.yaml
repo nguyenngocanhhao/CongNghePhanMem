@@ -3,6 +3,6 @@ services:
     name: AthenaLibrary
     env: dotnet
     branch: master
-    buildCommand: "dotnet publish -c Release -o /app/publish"
-    startCommand: "dotnet /app/publish/NhaSachMetMoi.dll"
+    buildCommand: "msbuild NhaSachMetMoi.sln /p:Configuration=Release"
+    startCommand: "NhaSachMetMoi/NhaSachMetMoi.exe"
     plan: free
