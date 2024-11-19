@@ -7,13 +7,17 @@ EXPOSE 80
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
 
-# Copy the solution file and restore dependencies
+# Copy the solution and project files
 COPY ["NhaSachMetMoi.sln", "./"]
 COPY ["NhaSachMetMoi/NhaSachMetMoi.csproj", "NhaSachMetMoi/"]
-RUN dotnet restore
 
-# Copy the rest of the application and build it
+# Restore dependencies
+RUN dotnet restore "NhaSachMetMoi/NhaSachMetMoi.csproj"
+
+# Copy the entire solution
 COPY . .
+
+# Build the application
 WORKDIR "/src/NhaSachMetMoi"
 RUN dotnet build -c Release -o /app/build
 
