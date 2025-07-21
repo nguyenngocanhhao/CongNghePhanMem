@@ -465,6 +465,7 @@
     <Content Include="Content\fonts\Montserrat.ttf" />
     <Content Include="Content\fonts\Play_fair1.ttf" />
     <Content Include="Content\fonts\Play_fair.ttf" />
+    <Content Include=".gitignore" />
     <None Include="Scripts\jquery-3.7.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.7.1.js" />
     <Content Include="Scripts\jquery-3.7.1.min.js" />
